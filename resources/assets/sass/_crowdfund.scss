@@ -168,7 +168,7 @@ the order is
 }
 
 .search-btn {
-	background: url(../images/searchicon.png) no-repeat;
+	background: url(/images/searchicon.png) no-repeat;
 	width: 30px !important;
 	height: 25px;
 	border: none;
@@ -221,7 +221,7 @@ div.searchwform{
     background: 3095c7;
     padding-bottom: 20px;
     height: 280px;
-    background: url(../images/banner_footer.jpg) no-repeat bottom #3095c7;
+    background: url(/images/banner_footer.jpg) no-repeat bottom #3095c7;
     text-align: center;
     bottom:0px;
     background-position-x: center;
@@ -380,16 +380,16 @@ div.searchwform{
 }
 
 .socialfooter li.fb
-{background:url(../images/social/fb-on.png);}
+{background:url(/images/social/fb-on.png);}
 
 .socialfooter li.tw
-{background:url(../images/social/tw-on.png);}
+{background:url(/images/social/tw-on.png);}
 
 .socialfooter li.gg
-{background:url(../images/social/g-on.png);}
+{background:url(/images/social/g-on.png);}
 
 .socialfooter li.rss
-{background:url(../images/social/rss-on.png);}
+{background:url(/images/social/rss-on.png);}
 
 .socialfooter li {
     width: 28px;
@@ -397,9 +397,9 @@ div.searchwform{
     float: left;
     list-style: none;
     margin-right: 10px;
-    background-size: contain !Important;
     margin-top: 5px;
     margin-left: 10px;
+    background-size: contain !important;
 }
 
 #copyright {
