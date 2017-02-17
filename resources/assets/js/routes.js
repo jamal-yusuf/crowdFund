@@ -1,15 +1,24 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-const SERVER_PAGE = Vue.component('any-vue',require('./_template.vue'));
+const SERVER_PAGE = Vue.component('any-vue',require('./serverPage.vue'));
 
 let routes = [
-	{	
-		path: '/',				
-		component: require('./vpages/home') 
+	{
+		path: '/',			
+		component: SERVER_PAGE ,
+		target:'/page/home'
 	},{
-		path: '/homepage',				
-		component: require('./vpages/home') 
+		path: '/home',			
+		component: SERVER_PAGE ,
+		target:'/page/home'
+	},{
+		path: '/homepage',			
+		component: SERVER_PAGE ,
+		target:'/page/home'
+	},{
+		path: '/page/home',			
+		component: SERVER_PAGE ,
 	},{
 		path: '/page/about',			
 		component: SERVER_PAGE ,
@@ -41,7 +50,7 @@ let routes = [
 		path: '/page/register',				
 		component: SERVER_PAGE 
 	},{
-		path: '/page/contact',				
+		path: '/page/contact-us',				
 		component: SERVER_PAGE 
 	},
 ]

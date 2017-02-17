@@ -5,7 +5,7 @@
         </div>
     </div>
     <div id=brandAndMenu class="row">
-        <div id=brand class='col col-sm-4'>  <router-link to="/homepage"><img src="/images/logo.png"></router-link> </div>
+        <div id=brand class='col col-sm-4'>  <router-link to="/"><img src="/images/logo.png"></router-link> </div>
         <div id=topMenuWrap  class='hidden-xs'>
             <ul id="topMenu">
                 <li id="pageabout"><router-link to="/page/about">About</router-link></li>
@@ -15,10 +15,10 @@
                 <li class="dropdown" id="pagemore">
                     <a tabindex="-1" href="#" data-toggle="dropdown" class="dropdown-toggle">More</a>
                     <ul class="dropdown-menu " style="margin-left: -60px; margin-top: 22px;">
-                        <li><a tabindex="-1" href="/page/associates">TEAM</a></li>
-                        <li><a tabindex="-1" href="/page/partners">PARTNERS</a></li>
-                        <li><a tabindex="-1" href="http://oneupgr.tumblr.com/" target="_blank">BLOG</a></li>
-                        <li><a tabindex="-1" href="/page/faq">FAQs</a></li>
+                        <li><router-link tabindex="-1" to="/page/team">TEAM</router-link></li>
+                        <li><router-link tabindex="-1" to="/page/partners">PARTNERS</router-link></li>
+                        <li><router-link tabindex="-1" to="http://oneupgr.tumblr.com/" target="_blank">BLOG</router-link></li>
+                        <li><router-link tabindex="-1" to="/page/faq">FAQs</router-link></li>
                     </ul>
                 </li>
             </ul>
@@ -34,7 +34,7 @@
                     </form>
                 </li>
                 <li class="loginlink"><a id="navbar-login" href="/simple-login">LOGIN</a></li>
-                <li class="dropdown" style="margin-top:20px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b> </a>
+                <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b> </a>
                     <ul class="dropdown-menu">
                         <li class="active"><a href="/homepage?request_locale=en">English</a></li>
                         <li><a href="/homepage?request_locale=el">Greek</a></li>
@@ -54,10 +54,12 @@
     $(document).ready(function() {
         $('.searchwrap').on({
             'mouseenter':function(){
-               $('.search-query').animate({width: 200},500);
+               $('.search-query').animate({width: 200,
+                                          'box-shadow':'0px 0px 0px rgba(0, 0, 5, 0.065) inset',
+                                          'border-left':'2px solid black' },500);
             },
             'mouseleave':function(){
-                $('.search-query').animate({width: 0},500);
+                $('.search-query').animate({width: 0,'box-shadow': "0 0px 0px rgba(255, 255, 255, 0.0)", 'border':"none"  },500);
             }
         });
     });

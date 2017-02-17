@@ -11,12 +11,14 @@
 |
  */
 
-Route::get('/', 'PageController@index');
-
 Auth::routes();
 
-Route::get('/homepage', 'PageController@index');
+Route::get('/', 'PageController@homePage');
 
-Route::any('/page/{page}', 'PageController@index');
+Route::get('/home', 'PageController@homePage');
 
-Route::get('/api/page/{page}', 'PageController@page');
+Route::get('/homepage', 'PageController@homePage');
+
+Route::any('/page/{page}', 'PageController@page');
+
+Route::get('/api/page/{page}', 'PageController@api');

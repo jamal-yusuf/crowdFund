@@ -2,32 +2,32 @@
 
     <div id=bring2life class=row >
         <h3>Bringing <strong>Businesses</strong> to Life</h3>
-        <a href="/category/all" class="white_btn">Back a business</a>
-        <a href="/register/" class="blue_btn">Launch your business</a>
+        <router-link to="/category/all" class="white_btn">Back a business</router-link>
+        <router-link to="/register/" class="blue_btn">Launch your business</router-link>
     </div> <!-- bring2life -->
 
     <div id=restOfFooter class=row>
         <div id=footerLinksPart1 class='row'>
           <div class=row>
             <div class="col col-sm-2 span2">
-                <a href="/page/about"><h4>About</h4></a>
-                <a href="/page/contact-us"><h4>Contact Us</h4></a>
+                <router-link to="/page/about"><h4>About</h4></router-link>
+                <router-link to="/page/contact-us"><h4>Contact Us</h4></router-link>
                 <a href="/terms-of-use-en.pdf"><h4>Terms of Use</h4></a>
             </div>
             <div class="col col-sm-3 span2">
-                <a href="/page/how-it-works"><h4>HOW IT WORKS</h4></a>
+                <router-link to="/page/howitworks"><h4>HOW IT WORKS</h4></router-link>
             </div>
             <div class="col col-sm-2 span2">
-                <a href="/page/donate"><h4>DONATE</h4></a>
+                <router-link to="/page/donate"><h4>DONATE</h4></router-link>
             </div>
             <div class="col col-sm-2 span2">
-                <a href="/register/"><h4>Launch</h4></a>
+                <router-link to="/page/register/"><h4>Launch</h4></router-link>
             </div>
             <div class="col col-sm-2 span2">
-                <a href="/page/associates"><h4>TEAM</h4></a>
-                <a href="/page/partners"><h4>PARTNERS</h4></a>
+                <router-link to="/page/team"><h4>TEAM</h4></router-link>
+                <router-link to="/page/partners"><h4>PARTNERS</h4></router-link>
                 <a href="http://oneupgr.tumblr.com/" target="blank"><h4>BLOG</h4></a>
-                <a href="/page/faq"><h4>FAQs</h4></a>
+                <router-link to="/page/faq"><h4>FAQs</h4></router-link>
             </div>
           </div> <!-- row -->
         </div> <!-- footerLinksPart1 -->

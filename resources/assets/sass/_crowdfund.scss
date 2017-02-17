@@ -19,17 +19,18 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-  border-color: rgba(82, 168, 236, 0.8);
+  border-color: rgba(82, 100, 136, 0.8);
   outline: 0;
   outline: thin dotted \9;
   /* IE6-9 */
 
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
 
+* {
+        box-sizing: border-box !important;
+}
 
 body {
 	font-family: 'Open Sans', sans-serif !important;
@@ -169,6 +170,10 @@ the order is
 
 */
 
+#topActions{
+    display:flex;
+    align-items:center;
+}
 
 #topActions li.searchwrap{
 		position:relative;
@@ -189,9 +194,9 @@ the order is
 	width: 30px !important;
 	height: 25px;
 	border: none;
-	margin-top: 10px;
-	margin-bottom:0px;
-	margin-right: 10px;
+    margin-top:5px;
+    margin-bottom:0px;
+	margin-right: 5px;
 	float:right;
 	position:relative;
 	
@@ -199,23 +204,19 @@ the order is
 	
 }
 
-.form-search .search-query {
-    border: none;
-
-    font-size: 16px;
-    padding-left: 0px !important;
-    padding-top: 8px;
+.form-search input.search-query {
+    font-size: 14px;
+    padding-top: 4px;
     padding-bottom: 0;
     padding-right: 0px;
+    padding-left: 0px;
     font-weight: 300;
     font-family: inherit;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
+    border:none;
     border-radius: 0 !important;
-    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.065);
-    -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.065);
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.065);
+    padding-left:4px;
     float:right;
+    &:hover:not(:focus){ border-left: 1px solid #151515; }
 }
 
 .form-search .search-query {
@@ -291,6 +292,9 @@ div.searchwform{
     min-width: 180px;
     display: inline-block;
     text-align: center;
+    &:hover {
+        box-shadow: 10px 10px 5px 4px rgba(22,15,33,0.6);
+    }
 }
 
 #restOfFooter {
@@ -320,10 +324,28 @@ div.searchwform{
 	margin-bottom:40px;
 }
 
-#footerLinksPart1 a , #footerLinksPart1 a h4 {
+#footerLinksPart1 a h4 {
+    color:inherit;
+}
+
+#footerLinksPart1 a {
    color:#006991;
    font-weight: 300;
    text-transform: uppercase;
+
+    &.router-link-active ,  {
+       color:#0088cc;
+    }
+
+    &:not(.router-link-active):hover {
+        color:#0088cc;
+        text-decoration:underline;
+    }
+
+    &.router-link-active:not(:hover) {
+        color:#0088cc;
+        text-decoration:none;
+    }
 }
 
 

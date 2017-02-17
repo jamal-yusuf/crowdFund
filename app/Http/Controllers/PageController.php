@@ -4,22 +4,18 @@ namespace App\Http\Controllers;
 
 class PageController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
         //$this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index($page)
+    public function homePage()
+    {
+        return $this->page('home');
+    }
+
+    public function page($page = 'home')
     {
         if (!$page) {
             $page = 'home';
@@ -28,7 +24,7 @@ class PageController extends Controller
         return view('layouts.main')->with(['page_to_load' => $page]);
     }
 
-    public function page($page)
+    public function api($page)
     {
         $page = 'home';
         return view('pages.' . $page);
