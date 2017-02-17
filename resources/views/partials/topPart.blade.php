@@ -5,13 +5,13 @@
         </div>
     </div>
     <div id=brandAndMenu class="row">
-        <div id=brand class='col col-sm-4'>  <a href="/homepage"><img src="/images/logo.png"></a> </div>
+        <div id=brand class='col col-sm-4'>  <router-link to="/homepage"><img src="/images/logo.png"></router-link> </div>
         <div id=topMenuWrap  class='hidden-xs'>
             <ul id="topMenu">
-                <li id="pageabout"><a href="/page/about">About</a></li>
-                <li id="pageworks"><a href="/page/how-it-works">HOW IT WORKS</a></li>
-                <li id="pagedonors"><a href="/page/donate">DONATE</a></li>
-                <li id="pageregister"><a href="/register/">Launch</a></li>
+                <li id="pageabout"><router-link to="/page/about">About</router-link></li>
+                <li id="pageworks"><router-link to="/page/howitworks">HOW IT WORKS</router-link></li>
+                <li id="pagedonors"><router-link to="/page/donate">DONATE</router-link></li>
+                <li id="pageregister"><router-link to="/page/register/">Launch</router-link></li>
                 <li class="dropdown" id="pagemore">
                     <a tabindex="-1" href="#" data-toggle="dropdown" class="dropdown-toggle">More</a>
                     <ul class="dropdown-menu " style="margin-left: -60px; margin-top: 22px;">

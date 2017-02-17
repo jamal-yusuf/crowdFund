@@ -26,7 +26,7 @@
 
         @include('partials.topPart')
 
-        @yield('content')
+        <router-view></router-view>
 
         @include('partials.bottomPart')
 

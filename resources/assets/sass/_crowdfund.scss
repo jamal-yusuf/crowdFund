@@ -95,17 +95,16 @@ html,body{
 	display: inline;
 }
 
-ul#topMenu li>a, ul#topMenu li>a:hover, ul#topMenu li>a:visited {
+ul#topMenu a {
 	display:inline;
 	text-decoration: none;
     float: left;
     margin-right: 13px;   font-size: 17px;
-    	background-color: transparent;
+   	background-color: transparent;
     text-transform: uppercase;
     font-weight: 300;
     list-style: none;
     padding-right: 10px;
-    color : black;
 }
 
 ul#topMenu>li>a { 
@@ -135,7 +134,7 @@ ul#topActions {
 }
 
 
-ul#topActions li, ul#topActions li>a, ul#topActions li>a:hover  , ul#topActions li>a:visited {
+#topActions a {
 	display: inline;
 	list-style: none;
 	color:black;
@@ -146,8 +145,13 @@ ul#topActions li, ul#topActions li>a, ul#topActions li>a:hover  , ul#topActions 
     padding-left: 10px;
 }
 
-ul#topMenu li>a:hover , ul#topActions li>a:hover {
-	color:#0088cc;
+#topPart a{
+    
+    color:black;
+
+    &.router-link-active {
+	   color:#0088cc;
+    }
 }
 
 
