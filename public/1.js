@@ -50,19 +50,44 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = {
     data: function data() {
-        return { pageName: '' };
+        return { pageName: '', html: '55555', status: '', comp: null };
     },
     mounted: function mounted() {
         this.showName();
     },
 
 
+    render: function render(createElement) {
+        return createElement('div', { domProps: { innerHTML: '44444' } });
+    },
+
     methods: {
+
         showName: function showName() {
-            this.pageName = this.$route.path;
+            var _this = this;
+
+            var OK = function OK(reply) {
+                console.log(reply);
+                _this.pageName = _this.$route.path;
+                _this.status = '  ALL OK';
+                _this.html = reply.data;
+            };
+            var BAD = function BAD(error) {
+                console.log(error);
+                _this.pageName = _this.$route.path;
+                _this.status = '  OOPS !';
+                _this.html = error.response.data;
+            };
+            axios.get('/api/htmlany', {
+                params: {
+                    pageName: this.$route.path
+                }
+            }).then(OK).catch(BAD);
         }
     },
 
@@ -84,7 +109,7 @@ exports = module.exports = __webpack_require__(36)();
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -97,7 +122,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container"
-  }, [_vm._v("\nWelcome to " + _vm._s(_vm.pageName) + "\n")])
+  }, [_c('div', [_vm._v("Welcome to " + _vm._s(_vm.pageName) + " " + _vm._s(_vm.status) + " ")])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

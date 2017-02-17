@@ -1,6 +1,7 @@
+import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-const ANY_VUE = resolve => require(['./_template.vue'], resolve);
+const SERVER_PAGE = Vue.component('any-vue',require('./_template.vue'));
 
 let routes = [
 	{	
@@ -11,43 +12,41 @@ let routes = [
 		component: require('./vpages/home') 
 	},{
 		path: '/page/about',			
-		component: ANY_VUE ,
-		canreuse:false
+		component: SERVER_PAGE ,
 	},{
 		path: '/page/howitworks',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/donate',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/launch',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/team',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/partners',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/faq',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/login',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/all',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/register',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},{
 		path: '/page/contact',				
-		component: ANY_VUE 
+		component: SERVER_PAGE 
 	},
 ]
 
 export default new VueRouter({
 	routes,
 	mode:"history",
-
 });

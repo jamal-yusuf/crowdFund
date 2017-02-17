@@ -1,34 +1,6 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// install a JSONP callback for chunk loading
-/******/ 	var parentJsonpFunction = window["webpackJsonp"];
-/******/ 	window["webpackJsonp"] = function webpackJsonpCallback(chunkIds, moreModules, executeModules) {
-/******/ 		// add "moreModules" to the modules object,
-/******/ 		// then flag all "chunkIds" as loaded and fire callback
-/******/ 		var moduleId, chunkId, i = 0, resolves = [], result;
-/******/ 		for(;i < chunkIds.length; i++) {
-/******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId])
-/******/ 				resolves.push(installedChunks[chunkId][0]);
-/******/ 			installedChunks[chunkId] = 0;
-/******/ 		}
-/******/ 		for(moduleId in moreModules) {
-/******/ 			if(Object.prototype.hasOwnProperty.call(moreModules, moduleId)) {
-/******/ 				modules[moduleId] = moreModules[moduleId];
-/******/ 			}
-/******/ 		}
-/******/ 		if(parentJsonpFunction) parentJsonpFunction(chunkIds, moreModules, executeModules);
-/******/ 		while(resolves.length)
-/******/ 			resolves.shift()();
-
-/******/ 	};
-
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-
-/******/ 	// objects to store loaded and loading chunks
-/******/ 	var installedChunks = {
-/******/ 		0: 0
-/******/ 	};
 
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
@@ -54,49 +26,6 @@
 /******/ 		return module.exports;
 /******/ 	}
 
-/******/ 	// This file contains only the entry chunk.
-/******/ 	// The chunk loading function for additional chunks
-/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
-/******/ 		if(installedChunks[chunkId] === 0)
-/******/ 			return Promise.resolve();
-
-/******/ 		// an Promise means "currently loading".
-/******/ 		if(installedChunks[chunkId]) {
-/******/ 			return installedChunks[chunkId][2];
-/******/ 		}
-/******/ 		// start chunk loading
-/******/ 		var head = document.getElementsByTagName('head')[0];
-/******/ 		var script = document.createElement('script');
-/******/ 		script.type = 'text/javascript';
-/******/ 		script.charset = 'utf-8';
-/******/ 		script.async = true;
-/******/ 		script.timeout = 120000;
-
-/******/ 		if (__webpack_require__.nc) {
-/******/ 			script.setAttribute("nonce", __webpack_require__.nc);
-/******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + chunkId + ".js";
-/******/ 		var timeout = setTimeout(onScriptComplete, 120000);
-/******/ 		script.onerror = script.onload = onScriptComplete;
-/******/ 		function onScriptComplete() {
-/******/ 			// avoid mem leaks in IE.
-/******/ 			script.onerror = script.onload = null;
-/******/ 			clearTimeout(timeout);
-/******/ 			var chunk = installedChunks[chunkId];
-/******/ 			if(chunk !== 0) {
-/******/ 				if(chunk) chunk[1](new Error('Loading chunk ' + chunkId + ' failed.'));
-/******/ 				installedChunks[chunkId] = undefined;
-/******/ 			}
-/******/ 		};
-
-/******/ 		var promise = new Promise(function(resolve, reject) {
-/******/ 			installedChunks[chunkId] = [resolve, reject];
-/******/ 		});
-/******/ 		installedChunks[chunkId][2] = promise;
-
-/******/ 		head.appendChild(script);
-/******/ 		return promise;
-/******/ 	};
 
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
@@ -132,9 +61,6 @@
 
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "./";
-
-/******/ 	// on error function for async loading
-/******/ 	__webpack_require__.oe = function(err) { console.error(err); throw err; };
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 34);
@@ -11239,7 +11165,6 @@ __webpack_require__(29);
 var VueApp = new Vue({
     el: '#app',
     router: __WEBPACK_IMPORTED_MODULE_0__routes__["a" /* default */]
-
 });
 
 /***/ }),
@@ -25471,13 +25396,14 @@ module.exports = function() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_router__);
 
 
-var ANY_VUE = function ANY_VUE(resolve) {
-	return __webpack_require__.e/* require */(1).then(function() { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [__webpack_require__(52)]; (resolve.apply(null, __WEBPACK_AMD_REQUIRE_ARRAY__));}.bind(this)).catch(__webpack_require__.oe);
-};
+
+var SERVER_PAGE = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('any-vue', __webpack_require__(52));
 
 var routes = [{
 	path: '/',
@@ -25487,44 +25413,42 @@ var routes = [{
 	component: __webpack_require__(46)
 }, {
 	path: '/page/about',
-	component: ANY_VUE,
-	canreuse: false
+	component: SERVER_PAGE
 }, {
 	path: '/page/howitworks',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/donate',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/launch',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/team',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/partners',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/faq',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/login',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/all',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/register',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }, {
 	path: '/page/contact',
-	component: ANY_VUE
+	component: SERVER_PAGE
 }];
 
-/* harmony default export */ __webpack_exports__["a"] = new __WEBPACK_IMPORTED_MODULE_0_vue_router___default.a({
+/* harmony default export */ __webpack_exports__["a"] = new __WEBPACK_IMPORTED_MODULE_1_vue_router___default.a({
 	routes: routes,
 	mode: "history"
-
 });
 
 /***/ }),
@@ -25965,6 +25889,168 @@ module.exports = function listToStyles (parentId, list) {
   return styles
 }
 
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(56)
+
+var Component = __webpack_require__(47)(
+  /* script */
+  __webpack_require__(53),
+  /* template */
+  __webpack_require__(55),
+  /* scopeId */
+  "data-v-669b454c",
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/panagiotis/workspace/crowdFund/resources/assets/js/_template.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] _template.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-669b454c", Component.options)
+  } else {
+    hotAPI.reload("data-v-669b454c", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = {
+				data: function data() {
+								return { page: '', path: '', html: '', status: '' };
+				},
+				mounted: function mounted() {
+								this.html = this.$slots.default[0].elm.outerHTML;
+				},
+
+
+				methods: {
+
+								showHTML: function showHTML() {
+												var _this = this;
+
+												var target = this.$route.path;
+												var parts = target.match(/.*\/page\/(.*)$/);
+												if (parts && parts.length > 1) {
+																var page = parts[1];
+																var OK = function OK(reply) {
+																				console.log(reply);
+																				_this.path = _this.$route.path;
+																				_this.status = reply.status;
+																				_this.html = reply.data;
+																};
+																var BAD = function BAD(error) {
+																				console.log(error);
+																				_this.path = _this.$route.path;
+																				_this.status = '  OOPS !';
+																				_this.html = error.response.data;
+																				_this.status = error.response.status;
+																};
+																console.log(this.$route);
+
+																axios.get('/api/page/' + page, {
+																				params: {
+																								page_to_load: this.$route.path
+																				}
+																}).then(OK).catch(BAD);
+												}
+								}
+				},
+
+				watch: {
+								'$route': function $route(to, from) {
+												this.showHTML();
+								}
+				}
+
+};
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(36)();
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    domProps: {
+      "innerHTML": _vm._s(_vm.html)
+    }
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-669b454c", module.exports)
+  }
+}
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(54);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(50)("3ad92928", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-669b454c&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_template.vue", function() {
+     var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-669b454c&scoped=true!./../../../node_modules/sass-loader/index.js!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./_template.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

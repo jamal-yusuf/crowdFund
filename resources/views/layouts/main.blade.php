@@ -25,10 +25,15 @@
     <div id="app">
 
         @include('partials.topPart')
-
-        <router-view></router-view>
-
+        <router-view>
+        @if (! empty($page_to_load))
+            @include("pages.$page_to_load")
+        @else
+            @include('pages.home')
+        @endif
+        </router-view>
         @include('partials.bottomPart')
+
 
     </div> <!-- app -->
 
