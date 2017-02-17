@@ -149,8 +149,13 @@ ul#topActions {
     
     color:black;
 
-    &.router-link-active {
+    &.router-link-active ,  {
 	   color:#0088cc;
+    }
+
+    &:not(.router-link-active):hover {
+        color:#0088cc;
+        text-decoration:underline;
     }
 }
 
@@ -266,7 +271,7 @@ div.searchwform{
 }
 
 
-.blue_btn {
+.blue_btn, blue_btn a:hover, blue_btn a:focus {
     background: #006991;
     color: #fff;
 }

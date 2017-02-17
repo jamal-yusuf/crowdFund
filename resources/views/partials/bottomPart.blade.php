@@ -35,12 +35,12 @@
         <div id=footerLinksPart2 class=row>
             <div class="span12" style="position:relative;">
                 <div id="platformOf">
-                    ΜΙΑ ΠΛΑΤΦΟΡΜΑ ΤΗΣ <a href="http://www.praksis.gr/" target="_blank">PRAKSIS</a> ΓΙΑ ΤΟ ΠΡΟΓΡΑΜΜΑ
-                    <a href="http://www.praksis.gr/bcc" target="_blank">BCC</a>
+                    ΜΙΑ ΠΛΑΤΦΟΡΜΑ ΤΗΣ <a href="http://www.EXAMPLE.gr/" target="_blank">EXAMPLE</a> ΓΙΑ ΤΟ ΠΡΟΓΡΑΜΜΑ
+                    <a href="http://www.EXAMPLE.gr/example" target="_blank">example</a>
                 </div>
 
-                <a href="http://www.praksis.gr/" target="_blank"><img src="/images/logo_footer2.png" style="float:left; border-right:solid 2px #505050; margin-right:10px;" class="footerlogo"></a>
-                <a href="http://www.praksis.gr/bcc" target="_blank"><img src="/images/logo_footer.png" style="float:left;" class="footerlogo"></a>
+                <a href="http://www.EXAMPLE.gr/" target="_blank"><img src="/images/logo_footer2.png" style="float:left; border-right:solid 2px #505050; margin-right:10px;" class="footerlogo"></a>
+                <a href="http://www.EXAMPLE.gr/example" target="_blank"><img src="/images/logo_footer.png" style="float:left;" class="footerlogo"></a>
 
                 <div>
                     <form id="newsletter-form" name="global.NewsletterForm" action="/page/about" method="post">
@@ -57,7 +57,7 @@
 
                     <ul class="socialfooter">
                         <h4>FOLLOW US</h4>
-                        <li class="fb"><a href="https://www.facebook.com/praksis.bcc/" target="_blank"><img src="/images/social/fb-off.png" width="48" height="48"></a></li>
+                        <li class="fb"><a href="https://www.facebook.com/EXAMPLE.bcc/" target="_blank"><img src="/images/social/fb-off.png" width="48" height="48"></a></li>
                         <li class="tw" style="display:none"><a href="#" target="_blank"><img src="/images/social/tw-off.png" width="48" height="48"></a></li>
                         <li class="gg" style="display:none"><a href="#"><img src="/images/social/g-off.png" width="48" height="48"></a></li>
                         <li class="rss" style="display:none"><a href="#"><img src="/images/social/rss-off.png" width="48" height="48"></a></li>
@@ -68,7 +68,7 @@
 
         <div id=copyright class="row">
         <div style="float:left" class="allrights">
-            © 2015 PRAKSIS. All Rights Reserved.
+            © 2015 EXAMPLE. All Rights Reserved.
         </div>
         </div>
 

@@ -1,7 +1,7 @@
 <div id=topPart class=container-fluid>
     <div id=topLogos class=row>
         <div class="col col-xs-12" >
-            ΜΙΑ ΠΛΑΤΦΟΡΜΑ ΤΗΣ <a href="http://www.praksis.gr/" target="_blank"><img src="/images/praksisLogo.png" style="width:54px;"></a> ΓΙΑ ΤΟ ΠΡΟΓΡΑΜΜΑ <a href="http://www.praksis.gr/bcc" target="_blank"><img src="/images/bccLogo.png" style="width:48px;"></a>
+            ΜΙΑ ΠΛΑΤΦΟΡΜΑ ΤΗΣ <a href="http://www.example.gr/something" target="_blank"><img src="/images/parentLogo.png" style="width:54px;"></a> ΓΙΑ ΤΟ ΠΡΟΓΡΑΜΜΑ <a href="http://www.example.gr/something" target="_blank"><img src="/images/myLogo.png" style="width:48px;"></a>
         </div>
     </div>
     <div id=brandAndMenu class="row">
