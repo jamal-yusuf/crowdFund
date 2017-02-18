@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-const serverPage = Vue.component('server-page',require('./serverPage.vue'));
+const serverPage = Vue.component('server-page',require('./components/serverPage.vue'));
 
 let routes = [
 	{

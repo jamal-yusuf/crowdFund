@@ -1,8 +1,6 @@
 require('./startup');
-import router from './routes';
 
-const dataModel={  };
-window.dataModel=dataModel;
+import router from './routes';
 
 // here load all our components
 // e.g. 
@@ -17,7 +15,6 @@ const VueApp = new Vue({
     router,
     data: {
     	currentPageHtml:'<div>loading ....</div',
-      	dataModel: dataModel,
     },
     computed: {
     	propsData() { return  {dataModel: this.dataModel } }

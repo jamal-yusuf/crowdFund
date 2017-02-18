@@ -22023,8 +22023,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 __webpack_require__(33);
 
 
-var dataModel = {};
-window.dataModel = dataModel;
 
 // here load all our components
 // e.g. 
@@ -22038,8 +22036,7 @@ var VueApp = new Vue({
     el: '#app',
     router: __WEBPACK_IMPORTED_MODULE_0__routes__["a" /* default */],
     data: {
-        currentPageHtml: '<div>loading ....</div',
-        dataModel: dataModel
+        currentPageHtml: '<div>loading ....</div'
     },
     computed: {
         propsData: function propsData() {
@@ -22899,68 +22896,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 31 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = {
-       data: function data() {
-              return { path: '', html: '', status: '' };
-       },
-       mounted: function mounted() {
-              this.$parent.currentPageHtml = this.$slots.default[0].elm.outerHTML, this.showHTML();
-       },
-
-
-       methods: {
-
-              showHTML: function showHTML() {
-                     var my = this;
-                     var target = my.$route.target || my.$route.path;
-                     var parts = target.match(/.*\/page\/(.*)$/);
-                     var page = 'home';
-                     if (parts && parts.length > 1) {
-                            page = parts[1];
-                     }
-                     var OK = function OK(reply) {
-                            my.path = my.$route.path;
-                            my.status = reply.status;
-                            my.html = reply.data;
-                            my.$parent.currentPageHtml = my.html;
-                     };
-                     var BAD = function BAD(error) {
-                            console.log(error);
-                            my.path = my.$route.path;
-                            my.status = '  OOPS !';
-                            my.html = error.response.data;
-                            my.status = error.response.status;
-                     };
-                     axios.get('/api/page/' + page, {
-                            params: {
-                                   page_to_load: my.$route.path
-                            }
-                     }).then(OK).catch(BAD);
-              }
-       },
-
-       watch: {
-              '$route': function $route(to, from) {
-                     this.showHTML();
-              }
-       }
-};
-
-/***/ }),
+/* 31 */,
 /* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -22972,7 +22908,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-var serverPage = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('server-page', __webpack_require__(37));
+var serverPage = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('server-page', __webpack_require__(60));
 
 var routes = [{
 	path: '/',
@@ -25418,40 +25354,7 @@ if (typeof jQuery === 'undefined') {
 /***/ }),
 /* 35 */,
 /* 36 */,
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(38)(
-  /* script */
-  __webpack_require__(31),
-  /* template */
-  __webpack_require__(39),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/home/panagiotis/workspace/crowdFund/resources/assets/js/serverPage.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] serverPage.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4307c1c1", Component.options)
-  } else {
-    hotAPI.reload("data-v-4307c1c1", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
+/* 37 */,
 /* 38 */
 /***/ (function(module, exports) {
 
@@ -25505,28 +25408,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 39 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (false),
-      expression: "false"
-    }]
-  }, [_vm._t("default")], 2)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-4307c1c1", module.exports)
-  }
-}
-
-/***/ }),
+/* 39 */,
 /* 40 */,
 /* 41 */,
 /* 42 */,
@@ -25645,6 +25527,124 @@ if (false) {(function () {
 
 module.exports = Component.exports
 
+
+/***/ }),
+/* 59 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = {
+       data: function data() {
+              return { path: '', html: '', status: '' };
+       },
+       mounted: function mounted() {
+              this.$parent.currentPageHtml = this.$slots.default[0].elm.outerHTML, this.showHTML();
+       },
+
+
+       methods: {
+
+              showHTML: function showHTML() {
+                     var my = this;
+                     var target = my.$route.target || my.$route.path;
+                     var parts = target.match(/.*\/page\/(.*)$/);
+                     var page = 'home';
+                     if (parts && parts.length > 1) {
+                            page = parts[1];
+                     }
+                     var OK = function OK(reply) {
+                            my.path = my.$route.path;
+                            my.status = reply.status;
+                            my.html = reply.data;
+                            my.$parent.currentPageHtml = my.html;
+                     };
+                     var BAD = function BAD(error) {
+                            console.log(error);
+                            my.path = my.$route.path;
+                            my.status = '  OOPS !';
+                            my.html = error.response.data;
+                            my.status = error.response.status;
+                     };
+                     axios.get('/api/page/' + page, {
+                            params: {
+                                   page_to_load: my.$route.path
+                            }
+                     }).then(OK).catch(BAD);
+              }
+       },
+
+       watch: {
+              '$route': function $route(to, from) {
+                     this.showHTML();
+              }
+       }
+};
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(38)(
+  /* script */
+  __webpack_require__(59),
+  /* template */
+  __webpack_require__(61),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/panagiotis/workspace/crowdFund/resources/assets/js/components/serverPage.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] serverPage.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9eea1be8", Component.options)
+  } else {
+    hotAPI.reload("data-v-9eea1be8", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (false),
+      expression: "false"
+    }]
+  }, [_vm._t("default")], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-9eea1be8", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
