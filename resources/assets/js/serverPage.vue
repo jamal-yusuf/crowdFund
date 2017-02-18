@@ -1,7 +1,7 @@
 <template>
 
     <div v-show='false'>
-    <slot></slot>
+        <slot></slot>
     </div>
 
 </template>
@@ -46,8 +46,3 @@
         watch: {  '$route' (to, from) { this.showHTML() } }
     }
 </script>
-
-
-<style scoped lang="scss">
-    
-</style>

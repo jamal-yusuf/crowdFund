@@ -342,7 +342,7 @@ div.searchwform{
         text-decoration:underline;
     }
 
-    &.router-link-active:not(:hover) {
+    &.router-link-active {
         color:#0088cc;
         text-decoration:none;
     }
@@ -450,6 +450,14 @@ div.searchwform{
 	color: #a8a8a8;
 	font-size: 12px;
 	padding: 0px 0;
+}
+
+#stub{
+    background-image: url("/images/minions-at-work.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    height:561px;
 }
 
 @media screen and (max-width: 450px) {

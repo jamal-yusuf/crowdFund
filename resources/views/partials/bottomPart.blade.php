@@ -2,8 +2,8 @@
 
     <div id=bring2life class=row >
         <h3>Bringing <strong>Businesses</strong> to Life</h3>
-        <router-link to="/category/all" class="white_btn">Back a business</router-link>
-        <router-link to="/register/" class="blue_btn">Launch your business</router-link>
+        <router-link to="/page/projects"  class="white_btn">Back a business</router-link>
+        <router-link to="/page/register/" class="blue_btn">Launch your business</router-link>
     </div> <!-- bring2life -->
 
     <div id=restOfFooter class=row>
