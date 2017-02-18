@@ -1,14 +1,14 @@
 <template>
 
     <div v-show='false'>
-    <slot></slot>
+        <slot></slot>
     </div>
 
 </template>
 
 <script>
     export default {
-        data() { return { page: '', path: '', html:'', status:'' } },
+        data() { return { path: '', html:'', status:'' } },
 
         mounted() { this.$parent.currentPageHtml=( this.$slots.default[0].elm.outerHTML), this.showHTML()}, 
 
@@ -46,8 +46,3 @@
         watch: {  '$route' (to, from) { this.showHTML() } }
     }
 </script>
-
-
-<style scoped lang="scss">
-    
-</style>

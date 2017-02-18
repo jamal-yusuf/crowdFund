@@ -6,8 +6,7 @@
 */
 
 <template>
-
-<div class='tickerWrap'>
+<div class='tickerWrap' v-show='ratesData'>
 	<div v-if='ratesData.date' class='ratesTable'>  
 		<div>{{ratesData.base}} Rates as of : {{ratesData.date}}   </div> 
 		<div class='ccyRecord' v-for='(rate,ccy) in ratesData.rates'>
@@ -17,13 +16,14 @@
 	</div>
 </div>
 
-
 </template>
 
 
 <script >
 export default {
- props: ['ratesData'],
+ data() {return {ratesData : {}}} ,
+ name:'vue-rates',
+ mounted() { axios.get('https://api.fixer.io/latest?base=EUR&symbols=GBP,USD,EUR').then(  (ret) => { this.ratesData=ret.data} ) }
 }
 </script>
 
@@ -31,9 +31,6 @@ export default {
 <style scoped lang="scss">
 
 .tickerWrap{
-	position:relative;
-	display:block;
-	width:100%;
 }
 
 .ccyRecord{
@@ -61,8 +58,7 @@ export default {
 }
 
 @keyframes mymove{
-    0% {left: 100%;}
-   
+    0% {left: 100%;}   
     100% { transform:translateX(-100%);left:0%;}
 }
 
