@@ -17,7 +17,7 @@
                     <ul class="dropdown-menu " style="margin-left: -60px; margin-top: 22px;">
                         <li><router-link tabindex="-1" to="/page/team">TEAM</router-link></li>
                         <li><router-link tabindex="-1" to="/page/partners">PARTNERS</router-link></li>
-                        <li><router-link tabindex="-1" to="http://oneupgr.tumblr.com/" target="_blank">BLOG</router-link></li>
+                        <li><a tabindex="-1" href="http://oneupgr.tumblr.com/" target="_blank">BLOG</a></li>
                         <li><router-link tabindex="-1" to="/page/faq">FAQs</router-link></li>
                     </ul>
                 </li>
@@ -56,10 +56,10 @@
             'mouseenter':function(){
                $('.search-query').animate({width: 200,
                                           'box-shadow':'0px 0px 0px rgba(0, 0, 5, 0.065) inset',
-                                          'border-left':'2px solid black' },500);
+                                          'border-left':'2px solid black' },500).focus();
             },
             'mouseleave':function(){
-                $('.search-query').animate({width: 0,'box-shadow': "0 0px 0px rgba(255, 255, 255, 0.0)", 'border':"none"  },500);
+                $('.search-query').animate({width: 0,'box-shadow': "none", 'border':"none"  },500).blur();
             }
         });
     });

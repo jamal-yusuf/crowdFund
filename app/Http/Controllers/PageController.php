@@ -15,18 +15,25 @@ class PageController extends Controller
         return $this->page('home');
     }
 
-    public function page($page = 'home')
+    public function page($requestedPage = 'home')
     {
-        if (!$page) {
-            $page = 'home';
+        if (!$requestedPage) {
+            $requestedPage = 'home';
         }
-        $page = 'home';
-        return view('layouts.main')->with(['page_to_load' => $page]);
+
+        $getPage = $requestedPage;
+        if (!\View::exists('pages.' . $requestedPage)) {
+            $getPage = 'stub';
+        }
+        return view('layouts.main')->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
     }
 
-    public function api($page)
+    public function api($requestedPage)
     {
-        $page = 'home';
-        return view('pages.' . $page);
+        $getPage = $requestedPage;
+        if (!\View::exists('pages.' . $requestedPage)) {
+            $getPage = 'stub';
+        }
+        return view('pages.' . $getPage)->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
     }
 }

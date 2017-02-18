@@ -1,7 +1,7 @@
 <template>
 
-    <div v-html='html'>
-    	<slot></slot>
+    <div v-show='false'>
+    <slot></slot>
     </div>
 
 </template>
@@ -10,7 +10,7 @@
     export default {
         data() { return { page: '', path: '', html:'', status:'' } },
 
-        mounted() { this.html=( this.$slots.default[0].elm.outerHTML)}, 
+        mounted() { this.$parent.currentPageHtml=( this.$slots.default[0].elm.outerHTML), this.showHTML()}, 
 
         methods: {
 		
@@ -26,6 +26,7 @@
 	        		my.path=my.$route.path 
 	        		my.status=reply.status; 
 	        		my.html=reply.data;
+                    my.$parent.currentPageHtml=my.html;
 	        	};
         		var BAD=error=> {
 					console.log(error);

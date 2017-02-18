@@ -25,6 +25,8 @@
     <div id="app">
 
         @include('partials.topPart')
+
+        <dynamic :template="currentPageHtml" :data="propsData"></dynamic>
         <router-view>
         @if (! empty($page_to_load))
             @include("pages.$page_to_load")
