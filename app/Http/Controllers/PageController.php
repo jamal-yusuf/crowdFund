@@ -25,15 +25,11 @@ class PageController extends Controller
         if (!\View::exists('pages.' . $requestedPage)) {
             $getPage = 'stub';
         }
-        return view('layouts.main')->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
-    }
 
-    public function api($requestedPage)
-    {
-        $getPage = $requestedPage;
-        if (!\View::exists('pages.' . $requestedPage)) {
-            $getPage = 'stub';
+        if (request()->ajax()) {
+            return view('pages.' . $getPage)->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
+        } else {
+            return view('layouts.main')->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
         }
-        return view('pages.' . $getPage)->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
     }
 }

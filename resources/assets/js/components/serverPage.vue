@@ -1,48 +1,96 @@
 <template>
 
-    <div v-show='false'>
-        <slot></slot>
+    <div>
+        <div v-show="html==''">
+            <slot></slot>
+        </div>
+        <dynamic-server-page-component v-if='html' :html='html' :data="contextData"></dynamic-server-page-component> 
     </div>
-
+    </div>
 </template>
 
 <script>
+
+    var Loading = {
+        template: `<div></div>`
+    }
+
+    var render= function(h, context) {
+            var html=context.props.html ;
+            const dynComponent = {
+                name:'dynamic-server-page-component',
+                template:html,
+                data() { return context.props.data },
+            }
+            const component = html ? dynComponent : Loading;
+            return h(component);
+        }
+
+    var DynamicServerPageComponent= {
+        functional: true,
+        name:'dynamic-server-page-component',
+        props: {
+            html: String,
+            data: { type: Object, default: () => {} }
+        },
+        render
+    }
+
+
     export default {
-        data() { return { path: '', html:'', status:'' } },
+        data() { return { path: '', html:'', scripts: '', status:'' } },
+        name:'server-page',
+        computed: {
+            contextData() { 
+                return  this.$parent._data
+            }
+        },
 
-        mounted() { this.$parent.currentPageHtml=( this.$slots.default[0].elm.outerHTML), this.showHTML()}, 
-
+        components: { DynamicServerPageComponent },
+        mounted() { 
+            if( ! this.$slots['default']){
+                this.showPage()
+            } 
+        },
         methods: {
 		
-        	showHTML: function(){ 
+        	showPage: function(){ 
 	       		var my=this;
+                my.path=my.$route.path 
         		let target=my.$route.target || my.$route.path;
-        		let parts=target.match(/.*\/page\/(.*)$/);
-        		let page='home'
-        		if (parts && parts.length>1) {
-        			page =parts[1];
-        		}
         		var OK=reply=>{
-	        		my.path=my.$route.path 
 	        		my.status=reply.status; 
-	        		my.html=reply.data;
-                    my.$parent.currentPageHtml=my.html;
+                    let pageDOM=this.parsePage(reply.data);
+                    my.html=pageDOM.html ;
+                    my.scripts=pageDOM.scripts ;
+                    if(my.scripts){
+                        eval(my.scripts);
+                    }
 	        	};
         		var BAD=error=> {
 					console.log(error);
-					my.path=my.$route.path 
-					my.status='  OOPS !'
 	        		my.html=error.response.data;
 	        		my.status=error.response.status; 
 	        	};
-        		axios.get('/api/page/'+page, { 
-    					params : { 
-    						page_to_load: my.$route.path
-    					}
-    			}).then(OK).catch(BAD)
-	        }
+        		axios.get(target).then(OK).catch(BAD)
+	        },
+
+            parsePage: function(html){
+                let page=$.parseHTML($.trim(html),null,true);
+                let pureHTML='';
+                let scripts='';
+                $.each(page, (i,el) => { 
+                    if (el.nodeName.toLowerCase()=='script' ) {
+                        scripts=scripts + el.innerHTML + '\n';
+                    } else { 
+                        if (el.outerHTML) pureHTML= pureHTML + el.outerHTML ;
+                    }
+                });
+                return { html:pureHTML , scripts:scripts};
+            }
+
         },
 
-        watch: {  '$route' (to, from) { this.showHTML() } }
+        watch: {  '$route' (to, from) { this.showPage() } }
     }
 </script>

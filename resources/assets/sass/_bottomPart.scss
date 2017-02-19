@@ -1,0 +1,220 @@
+
+#restofpage{
+     margin:0;
+     position:relative;
+     width:100%
+}
+
+
+#bring2life {
+    position: relative;
+    background: 3095c7;
+    padding-bottom: 20px;
+    height: 280px;
+    background: url(/images/banner_footer.jpg) no-repeat bottom #3095c7;
+    text-align: center;
+    bottom:0px;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: initial;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(48, 149, 199);
+    h3 {
+    	position:relative;
+        color: #fff;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        margin-top: 90px;
+        font-size: 36px;
+    }
+    a.white_btn ,  a.blue_btn {
+        position: relative;
+        padding: 15px 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 300;
+        min-width: 180px;
+        display: inline-block;
+        text-align: center;
+        &:hover {
+            box-shadow: 10px 10px 5px 4px rgba(22,15,33,0.6);
+        }
+    }
+}
+
+
+.white_btn {
+    background: #fff;
+    color: #006991;
+    margin-right: 27px;
+}
+
+
+.blue_btn, blue_btn a:hover, blue_btn a:focus {
+    background: #006991;
+    color: #fff;
+}
+
+
+
+
+#restOfFooter {
+	background-color: black;
+}
+
+#footerLinksPart1, #footerLinksPart2, #copyright {
+	max-width: 940px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:40px;
+    background-color: black;
+    opacity:1;
+}
+
+#copyright {
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+}
+
+#footerLinksPart2  {
+    border-top: solid 1px #2a2a2a;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(42, 42, 42);
+    border-bottom: solid 1px #2a2a2a;
+    padding: 20px 0;
+	margin-top:20px;
+	margin-bottom:40px;
+}
+
+#footerLinksPart1 a h4 {
+    color:inherit;
+}
+
+#footerLinksPart1 a {
+   color:#006991;
+   font-weight: 300;
+   text-transform: uppercase;
+
+    &.router-link-active ,  {
+       color:#0088cc;
+    }
+
+    &:not(.router-link-active):hover {
+        color:#0088cc;
+        text-decoration:underline;
+    }
+
+    &.router-link-active {
+        color:#0088cc;
+        text-decoration:none;
+    }
+}
+
+
+#footerLinksPart2 a {
+	color:#a8a8a8;
+}
+
+#platformOf {
+    top: 10px;
+    position: absolute;
+    color: #595959;
+}
+#platformOf a {
+    color: #595959;
+    text-decoration: underline;
+}
+
+#footerLinksPart2 img  {
+    margin-top: 45px;
+}
+
+
+#newsletter-form {
+    float: left;
+    width: 380px;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 0;
+}
+
+#newsletter-form legend {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 0;
+    border-bottom: none;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#newsletter-form input[type=text] {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 3px;
+    width: 265px;
+    border :1px;
+    border-radius: 0 !important;
+}
+
+
+#newsletter-form .blue_btn {
+    border: none;
+    text-transform: uppercase;
+    padding: 11px 16px;
+}
+
+.socialfooter {
+	margin-top: 10px;
+    float: left;
+}
+
+.socialfooter h4 {
+    font-weight: 300;
+    margin-bottom: 20px;
+    float: left;
+    color : white;
+}
+
+.socialfooter li a
+{
+    width: 28px;
+    height: 28px;
+    text-indent: -9999px;
+    display: block;
+}
+
+.socialfooter li.fb
+{background:url(/images/social/fb-on.png);}
+
+.socialfooter li.tw
+{background:url(/images/social/tw-on.png);}
+
+.socialfooter li.gg
+{background:url(/images/social/g-on.png);}
+
+.socialfooter li.rss
+{background:url(/images/social/rss-on.png);}
+
+.socialfooter li {
+    width: 28px;
+    height: 28px;
+    float: left;
+    list-style: none;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-size: contain !important;
+}
+
+#copyright {
+	color: #a8a8a8;
+	font-size: 12px;
+	padding: 0px 0;
+}

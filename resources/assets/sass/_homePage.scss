@@ -1,0 +1,83 @@
+
+#homePage, #homePicturesCarousel{
+	position:relative;
+	top:0px;
+    margin-bottom: 0;
+	width:100%;
+}
+
+
+#myCarousel {
+    margin-bottom: 0;
+    height: 100%;
+
+	.carousel-indicators li { 
+		visibility: hidden;
+	}
+
+ 	.hasimg {
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: 0px 0px;
+	   
+
+
+		.carousel-inner-div {
+			
+		    text-align: center;
+		    padding-top: 0;
+		    position: relative;
+		    height: 735px;
+		    margin:auto;
+		    position:relative;
+		    
+		   
+
+			.startBtn {
+				cursor:pointer;
+				position :relative;
+			    background: white;
+			    border: none;
+			    padding: 20px 10px;
+			    color: #006991;
+			    font-weight: 400;
+			    font-size: 24px;
+			    width:240px;
+			    top:77%;
+
+				&:hover:not(:active) {
+		            box-shadow: 5px 5px 5px 4px rgba(22,15,33,0.6);
+				}
+				&:active {
+		            box-shadow:  3px 3px 3px 3px rgba(22,15,33,0.6) inset;
+				}
+			}
+		}
+	}
+}
+
+.bannerlinks {
+    min-height: 235px;
+    background-image: url(/images/line.jpg) repeat-x bottom #e3e0db;
+    border: 2px solid black;
+
+    .bannerlinks_inside {
+    	position:relative;
+ 		margin: 0 auto;
+    	width: 940px;
+    	height: 125px;
+    	border: 2px solid red;
+
+	}
+
+	.arrowDown {
+		display:block;
+		top:-100px;
+    	position: relative;
+    	cursor: pointer;
+    	img {
+    		display:block;
+    		margin:auto;
+    	}
+	}
+}

@@ -25,9 +25,8 @@
 <body>
     <div id="app">
 
-        @include('partials.topPart')
 
-        <dynamic :template="currentPageHtml" :data="propsData"></dynamic>
+        @include('partials.topPart')
         <router-view>
         @if (! empty($page_to_load))
             @include("pages.$page_to_load")
@@ -35,8 +34,8 @@
             @include('pages.home')
         @endif
         </router-view>
+        <div style="height:600px; background-color:green"></div>
         @include('partials.bottomPart')
-
 
     </div> <!-- app -->
 

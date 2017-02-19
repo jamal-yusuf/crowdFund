@@ -20,5 +20,3 @@ Route::get('/home', 'PageController@homePage');
 Route::get('/homepage', 'PageController@homePage');
 
 Route::any('/page/{page}', 'PageController@page');
-
-Route::get('/api/page/{page}', 'PageController@api');

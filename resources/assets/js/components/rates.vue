@@ -23,7 +23,7 @@
 export default {
  data() {return {ratesData : {}}} ,
  name:'vue-rates',
- mounted() { axios.get('https://api.fixer.io/latest?base=EUR&symbols=GBP,USD,EUR').then(  (ret) => { this.ratesData=ret.data} ) }
+ mounted() { axios.get('//api.fixer.io/latest?base=EUR&symbols=GBP,USD,EUR').then(  (ret) => { this.ratesData=ret.data} ) }
 }
 </script>
 
