@@ -79,13 +79,18 @@
                 let page=$.parseHTML($.trim(html),null,true);
                 let pureHTML='';
                 let scripts='';
+                var elements=0;
                 $.each(page, (i,el) => { 
                     if (el.nodeName.toLowerCase()=='script' ) {
                         scripts=scripts + el.innerHTML + '\n';
                     } else { 
-                        if (el.outerHTML) pureHTML= pureHTML + el.outerHTML ;
+                        if (el.outerHTML) {
+                            pureHTML= pureHTML + el.outerHTML ;
+                            elements++;
+                        }
                     }
                 });
+                if (elements!=1) pureHTML='<div>'+pureHTML+'</div>';
                 return { html:pureHTML , scripts:scripts};
             }
 
