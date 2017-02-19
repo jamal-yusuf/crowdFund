@@ -28,7 +28,7 @@ $(document).ready(() => {
     $('body').on('click', '.arrowDown',function() {
         var wheight=$( window ).height();
         $("html, body").animate({
-            scrollTop : wheight+20
+            scrollTop : wheight+40
         }, 600);
         return false;
     });

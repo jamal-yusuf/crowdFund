@@ -63,6 +63,9 @@
                     let pageDOM=this.parsePage(reply.data);
                     my.html=pageDOM.html ;
                     my.scripts=pageDOM.scripts ;
+                    $("html, body").animate({
+                        scrollTop : 0
+                    }, 1);
                     if(my.scripts){
                         eval(my.scripts);
                     }

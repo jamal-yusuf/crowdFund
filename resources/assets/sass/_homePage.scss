@@ -1,9 +1,11 @@
 
+
 #homePage, #homePicturesCarousel{
 	position:relative;
 	top:0px;
     margin-bottom: 0;
 	width:100%;
+
 }
 
 
@@ -57,27 +59,94 @@
 }
 
 .bannerlinks {
-    min-height: 235px;
-    background-image: url(/images/line.jpg) repeat-x bottom #e3e0db;
-    border: 2px solid black;
+    background: url(/images/line.jpg) repeat-x bottom #e3e0db;
+    position:relative;
 
     .bannerlinks_inside {
     	position:relative;
  		margin: 0 auto;
     	width: 940px;
     	height: 125px;
-    	border: 2px solid red;
+    	padding:0px;
 
 	}
 
 	.arrowDown {
-		display:block;
 		top:-100px;
     	position: relative;
     	cursor: pointer;
+    	width:65px;
+    	margin:auto;
     	img {
-    		display:block;
+    		display:inline-block;
     		margin:auto;
+    		
     	}
 	}
+
+	
+	h2, h4 {
+    	text-align: center;
+    	color: #006991;
+    	text-transform: uppercase;
+	    font-weight: 300;
+	}
+
+    h2 {
+	    margin:-44px;
+	    font-size: 63px;
+	    padding-bottom: 30px;
+	}
+
+	h4 {
+		margin: 40px 50px 0px 50px;
+	    font-size: 39px;
+	    line-height: 44px;
+	}	
+
+
+	#ul {
+		text-align:center;
+		vertical-align:top;
+		padding-top:40px;
+		padding-left:40px;
+	}
+
+
+	.blk_1 {
+    	background: url(/images/icon_dreams.png) no-repeat top center;
+    	padding-top: 110px;
+    	max-width:270px;
+	}
+
+	.blk_2 {
+ 	   	background: url(/images/icon_donors.png) no-repeat top center;
+    	padding-top: 110px;
+    	max-width:270px;
+    	
+
+	}
+
+	.blk_3 {
+	    background: url(/images/icon_target.png) no-repeat top center;
+	    padding-top: 110px;
+	    max-width:270px;
+	}
+
+    hr {
+    	clear: both
+    }
+
+
+	h3 {
+		color: #69767f;
+	    font-weight: normal;
+    	font-size: 16px;
+    	text-transform: uppercase;
+    	margin-top:15px;
+    	line-height: 18px;
+    	height: 45px;
+    } 
+
+
 }

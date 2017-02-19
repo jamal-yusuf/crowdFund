@@ -22073,6 +22073,7 @@ module.exports = Vue$3;
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__routes__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils__ = __webpack_require__(58);
 __webpack_require__(35);
 
 // here load all our components
@@ -22102,6 +22103,10 @@ function gotoPage(page) {
 
 window.gotoPage = gotoPage;
 __webpack_require__(50);
+
+
+
+window.Utils = __WEBPACK_IMPORTED_MODULE_1__utils__["a" /* default */];
 
 /***/ }),
 /* 13 */
@@ -23029,6 +23034,9 @@ var DynamicServerPageComponent = {
                 var pageDOM = _this.parsePage(reply.data);
                 my.html = pageDOM.html;
                 my.scripts = pageDOM.scripts;
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 1);
                 if (my.scripts) {
                     eval(my.scripts);
                 }
@@ -25719,7 +25727,7 @@ $(document).ready(function () {
     $('body').on('click', '.arrowDown', function () {
         var wheight = $(window).height();
         $("html, body").animate({
-            scrollTop: wheight + 20
+            scrollTop: wheight + 40
         }, 600);
         return false;
     });
@@ -26155,6 +26163,256 @@ module.exports = function listToStyles (parentId, list) {
   return styles
 }
 
+
+/***/ }),
+/* 58 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+function Utils() {
+
+  "use strict";
+
+  var lastAjaxReply = '';
+
+  function ajaxSynch(url) {
+    var method = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'GET';
+    var dataType = arguments[2];
+    var data = arguments[3];
+    var fnSuccess = arguments[4];
+    var fnError = arguments[5];
+
+    var result = '';
+    var fnOK = fnSuccess ? function (r) {
+      lastAjaxReply = r;fnSuccess(r);result = r;
+    } : function (r) {
+      lastAjaxReply = r;result = r;
+    };
+    var fnBAD = fnError ? function (r) {
+      lastAjaxReply = r;fnBAD();console.log('Failed to ' + method + ' ' + url);
+    } : function (r) {
+      lastAjaxReply = r;console.log('Failed to ' + method + ' ' + url);
+    };
+    var options = {
+      type: method,
+      url: url,
+      data: data,
+      success: fnOK,
+      error: fnBAD,
+      async: false
+    };
+    if (dataType) {
+      options.dataType = dataType;
+    }
+    // console.log (options);
+    $.ajax(options);
+    return result;
+  }
+
+  function lastResponse() {
+    return lastAjaxReply;
+  }
+
+  function getJSON(url) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var fnOK = arguments[2];
+    var fnBad = arguments[3];
+
+    var ret = ajaxSynch(url, 'GET', 'json', data, fnOK, fnBad);
+    var J = ret ? (typeof ret === 'undefined' ? 'undefined' : _typeof(ret)) == 'object' ? ret : JSON.parse(ret) : {};
+    return J;
+  }
+
+  function postJSON(url) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+    var fnOK = arguments[2];
+    var fnBad = arguments[3];
+
+    var ret = ajaxSynch(url, 'POST', 'json', data, fnOK, fnBad);
+    var J = ret ? (typeof ret === 'undefined' ? 'undefined' : _typeof(ret)) == 'object' ? ret : JSON.parse(ret) : {};
+    return J;
+  }
+
+  function getHTML(url, withData) {
+    var html = ajaxSynch(url, 'GET', 'html');
+    if (withData) {
+      for (var key in withData) {
+        var value = withData[key];
+        var rex = new RegExp("{{\\s*" + key + "\\s*}}", 'g');
+        html = html.replace(rex, value);
+      }
+    }
+    var runit = function runit(match, code) {
+      return eval(code);
+    };
+    var rex = new RegExp("{!!\\s*(.+)\\s!!}", 'g');
+    html = html.replace(rex, runit);
+    return html;
+  }
+
+  function left(str, n) {
+    if (n <= 0) return "";else if (n > String(str).length) return str;else return String(str).substring(0, n);
+  }
+
+  function right(str, n) {
+    if (n <= 0) return "";else if (n > String(str).length) return str;else {
+      var iLen = String(str).length;
+      return String(str).substring(iLen, iLen - n);
+    }
+  }
+
+  function strPad(str, maxLen) {
+    var padWith = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ' ';
+
+    var toAdd;
+    if (maxLen <= 0) toAdd = "";else toAdd = Array(maxLen + 1).join(padWith);
+    if (maxLen < String(str).length) maxLen = String(str).length;
+    return right(toAdd + str, maxLen);
+  }
+
+  function zeroPad(i, n) {
+    return strPad(i, n, '0');
+  }
+
+  function titleCase(str) {
+    return str.split(' ').map(function (val) {
+      return val.charAt(0).toUpperCase() + val.substr(1).toLowerCase();
+    }).join(' ');
+  }
+
+  function firstCap(str) {
+    return str.charAt(0).toUpperCase() + str.substr(1);
+  }
+
+  function date2string(d) {
+    var sep = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '/';
+
+    if (!(d instanceof Date)) d = newDate(d);
+    var dd = zeroPad(d.getDate(), 2);
+    var mm = zeroPad(d.getMonth() + 1, 2);
+    var yy = d.getFullYear();
+    return [dd, mm, yy].join(sep);
+  }
+
+  function renderTable() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    var columns = options.columns || [];
+    var data = options.data || [];
+    var key = options.key || 'id';
+    var table = '';
+    var thead = '';
+    var tbody = '';
+    var s = '';
+    var cellValue = '',
+        colType = '';
+    var rowActions = options.rowActions || '';
+    if (!columns.length && data.length) {
+      for (var field in data[0]) {
+        columns.push({ name: field, label: firstCap(field) });
+      }
+    }
+    for (var i = 0; i < columns.length; i++) {
+      var col = columns[i];
+      colType = '';
+      if (typeof col == 'string') {
+        s = s + "<th>" + firstCap(col) + "</th>\n";
+      } else if ((typeof col === 'undefined' ? 'undefined' : _typeof(col)) == 'object') {
+        var colLabel = '';
+        colType = columns[i].type;
+        if ('label' in col) {
+          colLabel = col.label;
+        } else if ('name' in col) {
+          colLabel = firstCap(col.name);
+        }
+        if (col.sortable) {
+          colLabel = '<span> ' + colLabel + ' <i class="pull-right fa fa-sort"></i></span>';
+        }
+        var attr = ' name="' + col.name + '" ' + (col.attributes ? ' ' + col.attributes + ' ' : '') + (colType ? ' type="' + colType + '" ' : '');
+        s = s + '<th ' + attr + ' >' + colLabel + "</th>\n";
+      }
+    }
+    if (rowActions) s = s + "<th>-</th>";
+    thead = "<thead>\n<tr>\n" + s + "</tr>\n</thead>\n";
+    s = '';
+    for (var i = 0; i < data.length; i++) {
+      s = s + '<tr key="' + data[i][key] + '">\n';
+      for (var j = 0; j < columns.length; j++) {
+        if (typeof columns[j] == 'string') {
+          cellValue = data[i][columns[j]];
+        } else if (_typeof(columns[j]) == 'object') {
+          var field = columns[j].name;
+          var value = columns[j].value;
+          colType = columns[j].type;
+          if (typeof value == 'function') {
+            cellValue = columns[j].value(data[i]);
+          } else if (typeof value == 'undefined') {
+            cellValue = data[i][field];
+            if (colType == 'number') {
+              cellValue = formatCurrency(cellValue);
+              cellValue = '<span class="pull-right"> ' + cellValue + ' </span>';
+            } else if (colType == 'date') {
+              cellValue = new Date(cellValue);
+              cellValue = '<span class="text-center"> ' + date2string(cellValue) + ' </span>';
+            }
+          } else {
+            cellValue = value;
+          }
+        }
+        s = s + '<td>' + cellValue + "</td>\n";
+      }
+      if (rowActions) {
+        s = s + "<td>" + rowActions + "</td>\n";
+      }
+      s = s + "</tr>\n";
+    }
+    tbody = "<tbody>\n" + s + "</tbody>\n";
+    table = thead + tbody;
+    return table;
+  }
+
+  function isVisible(node) {
+    if (node instanceof HTMLElement) node = $(node);
+    if (!(node instanceof $)) node = $(node);
+    if (!node.is(':visible')) return false;
+    var el = node.first().get(0);
+    if (el) {
+      var r = el.getBoundingClientRect();
+      var w = window.document.body.getBoundingClientRect();
+      if (r.right < w.left || r.left > w.right || r.top > w.bottom || r.bottom < w.top) return false;
+      return true;
+    } else return false;
+  }
+
+  function formatCurrency(v) {
+    if (isNaN(String(v).replace(/,/g, ""))) return '';
+    var n = parseFloat(String(v).replace(/,/g, "")).toFixed(2);
+    n = n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return n;
+  }
+
+  this.getJSON = getJSON;
+  this.postJSON = postJSON;
+  this.getHTML = getHTML;
+  this.right = right;
+  this.left = left;
+  this.strPad = strPad;
+  this.zeroPad = zeroPad;
+  this.renderTable = renderTable;
+  this.titleCase = titleCase;
+  this.firstCap = firstCap;
+  this.lastResponse = lastResponse;
+  this.isVisible = isVisible;
+  this.formatCurrency = formatCurrency;
+  this.date2string = date2string;
+
+  // console.log(getHTML('/html/newUpdateEntry', {id : 'new'}))
+}
+
+/* harmony default export */ __webpack_exports__["a"] = new Utils();
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ })
 /******/ ]);

@@ -72,6 +72,6 @@
             © 2015 EXAMPLE. All Rights Reserved.
         </div>
         </div>
-
+        <a href="#" class="scrollup">Scroll</a>
     </div> <!-- rest of footer -->
 </div> <!-- bottomPart -->

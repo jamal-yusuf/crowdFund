@@ -30,3 +30,7 @@ function gotoPage(page){
 
 window.gotoPage=gotoPage;
 require('./pages/home');
+
+import Utils from './utils';
+
+window.Utils=Utils;

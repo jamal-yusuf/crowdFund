@@ -42,26 +42,26 @@
         <div class="row bannerlinks">
             <div class="bannerlinks_inside">
 
-                <div href="#bottomPart" class="arrowDown"><img alt="" src="/images/arrow_round_down_white.png"></div>
+                <div href="#" class="arrowDown"><img alt="" src="/images/arrow_round_down_white.png"></div>
 
                 <h2>Business Crowdfunding</h2>
                 <h4>Kick-starting new businesses in Greece</h4>
-                <ul>
+                <div id=ul class=row>
 
-                    <li class="blk_1">
+                    <div class="blk_1 col col-md-2  col-md-offset-1">
                         <h3>FULFILL YOUR DREAMS</h3>
-                    </li>
+                    </div>
 
-                    <li class="blk_2">
+                    <div class="blk_2 col col-md-4 col-md-offset-1">
                         <h3>FIND POTENTIAL DONORS</h3>
-                    </li>
+                    </div>
 
-                    <li class="blk_3">
+                    <div class="blk_3 col col-md-4">
                         <h3>REACH YOUR FUNDING TARGET<br>
                             AND RUN YOUR BUSINESS</h3>
-                    </li>
+                    </div>
 
-                </ul>
+                </div>
 
             </div>
         </div>
