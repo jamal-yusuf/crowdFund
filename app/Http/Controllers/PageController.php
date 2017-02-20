@@ -27,9 +27,13 @@ class PageController extends Controller
         }
 
         if (request()->ajax()) {
-            return view('pages.' . $getPage)->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
+            $v = view('pages.' . $getPage)->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
         } else {
-            return view('layouts.main')->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
+            $v = view('layouts.main')->with(['page_to_load' => $getPage, 'requested_page' => $requestedPage]);
         }
+        $r = response($v->render());
+        return ($r->header('Cache-Control', 'no-store, no-cache, must-revalidate')
+                ->header('Pragma', 'no-store')
+                ->header('Expires', -1));
     }
 }

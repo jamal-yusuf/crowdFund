@@ -11,3 +11,10 @@
         </div>
     </div>
 </div>
+
+<script>
+  if (! document.getElementById('app')) {
+    var me=window.location.href;
+    window.location.href=me;
+  }
+</script>
