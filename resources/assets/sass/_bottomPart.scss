@@ -98,6 +98,10 @@
 
 #footerLinksPart1 a h4 {
     color:inherit;
+    @include xs{
+        text-align:center;
+        width:100%;
+    }
 }
 
 #footerLinksPart1 a {

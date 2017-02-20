@@ -25,6 +25,13 @@
 <body>
     <div id="app">
 
+        <div id=cssMode >
+            <h1 class="visible-xs">EXTRA SMALL screen -xs-</h1>
+            <h1 class="visible-sm">SMALL screen -sm- </h1>
+            <h1 class="visible-md">MEDIUM screen -md-</h1>
+            <h1 class="visible-lg">LARGE screen -lg- </h1>
+        </div>
+
 
         @include('partials.topPart')
         <router-view>

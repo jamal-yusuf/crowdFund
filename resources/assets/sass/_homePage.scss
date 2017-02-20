@@ -62,12 +62,17 @@
     background: url(/images/line.jpg) repeat-x bottom #e3e0db;
     position:relative;
 
+
     .bannerlinks_inside {
     	position:relative;
  		margin: 0 auto;
-    	width: 940px;
+    	max-width: 940px;
     	height: 125px;
     	padding:0px;
+
+		@include xs{
+
+		}
 
 	}
 
@@ -110,19 +115,27 @@
 		vertical-align:top;
 		padding-top:40px;
 		padding-left:40px;
+
+		@include xs {
+				padding-left:0px;
+		}
+		@include sm {
+				padding-left:40px;
+		}
+		@include md {
+				padding-left:40px;
+		}
 	}
 
 
 	.blk_1 {
     	background: url(/images/icon_dreams.png) no-repeat top center;
     	padding-top: 110px;
-    	max-width:270px;
 	}
 
 	.blk_2 {
  	   	background: url(/images/icon_donors.png) no-repeat top center;
     	padding-top: 110px;
-    	max-width:270px;
     	
 
 	}
@@ -130,12 +143,7 @@
 	.blk_3 {
 	    background: url(/images/icon_target.png) no-repeat top center;
 	    padding-top: 110px;
-	    max-width:270px;
 	}
-
-    hr {
-    	clear: both
-    }
 
 
 	h3 {
@@ -146,7 +154,21 @@
     	margin-top:15px;
     	line-height: 18px;
     	height: 45px;
+
+    	@include sm {
+    		font-size:12px;
+    	}
+    	@include md {
+    		font-size:14px;
+    	}
+    	@include lg {
+    		font-size:16px;
+    	}
     } 
+
+	[class*=' blk'], [class^='blk']{
+		background-color:cyan;
+	}
 
 
 }
