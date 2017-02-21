@@ -69,11 +69,36 @@
     </div>
 
     <div id=homeActiveProjects>
+            <div style="height:600px; background-color:offwhite">
+                <h1> waiting for projects to appear here </h1>
+            </div>
+
     </div>
 
-    <div id=homeBrowse>
+    <div id=homeBrowse class="row categorieslinks">
+        <div class="browseLinks">
+
+            <h2><a href="/page/projects">Browse Businesses</a></h2>
+            <ul class="topcat">
+                <li class="blk_4">
+                    <h3>Retail</h3>
+                </li>
+
+                <li class="blk_5">
+                    <h3>Services</h3>
+                </li>
+
+                <li class="blk_6">
+                    <h3>New ideas - Technology</h3>
+                </li>
+
+            </ul>
+
+        </div>
     </div>
+
 </div>
+
 
 
 @if ( ! request()->ajax())

@@ -203,6 +203,17 @@ function Utils(){
   }
 
 
+  function getCoordinates(node){
+    if (node instanceof  HTMLElement) node=$(node);
+    if (!(node instanceof  $)) node=$(node);
+    var el=node.first().get(0);
+    if (el){
+      var r=el.getBoundingClientRect();
+     return r;
+    } else return false;
+  }
+
+
   function formatCurrency(v){
       if (isNaN(String(v).replace(/,/g, ""))) return '';
       var n= parseFloat(String(v).replace(/,/g, "")).toFixed(2);
@@ -225,6 +236,7 @@ function Utils(){
   this.isVisible=isVisible;
   this.formatCurrency=formatCurrency
   this.date2string=date2string
+  this.getCoordinates=getCoordinates
 
 
   // console.log(getHTML('/html/newUpdateEntry', {id : 'new'}))

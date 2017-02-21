@@ -41,13 +41,14 @@
             @include('pages.home')
         @endif
         </router-view>
-        <div style="height:600px; background-color:green"></div>
         @include('partials.bottomPart')
 
     </div> <!-- app -->
 
     <!-- Scripts -->
-     <script type="text/javascript" src="/js/app.js"></script>
+    <script src="/js/manifest.js"></script>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/app.js"></script>
     @stack('scripts')
 </body>
 </html>

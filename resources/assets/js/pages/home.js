@@ -26,10 +26,12 @@ $(document).ready(() => {
     });
 
     $('body').on('click', '.arrowDown',function() {
-        var wheight=$( window ).height();
-        $("html, body").animate({
-            scrollTop : wheight+40
-        }, 600);
+        var coord=Utils.getCoordinates('#homeCrowdfunding');
+        if (coord){
+            $("body").animate({
+                scrollTop : coord.top + window.scrollY
+            }, 600);
+        }
         return false;
     });
 

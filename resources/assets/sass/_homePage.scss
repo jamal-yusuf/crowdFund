@@ -1,5 +1,6 @@
 
 
+
 #homePage, #homePicturesCarousel{
 	position:relative;
 	top:0px;
@@ -66,12 +67,16 @@
     .bannerlinks_inside {
     	position:relative;
  		margin: 0 auto;
-    	max-width: 940px;
+    	max-width: 800px;
     	height: 125px;
     	padding:0px;
 
 		@include xs{
+	    	max-width: 740px;
+		}
 
+    	@include md{
+	    	max-width: 940px;
 		}
 
 	}
@@ -98,15 +103,24 @@
 	}
 
     h2 {
-	    margin:-44px;
-	    font-size: 63px;
+	    margin: auto;
+	    font-size: 50px;
 	    padding-bottom: 30px;
+
+	    @include sm {
+	    	font-size :64px;
+	    }
 	}
 
 	h4 {
 		margin: 40px 50px 0px 50px;
-	    font-size: 39px;
-	    line-height: 44px;
+	    font-size: 30px;
+	    line-height: 32px;
+
+	    @include sm {
+	    	font-size:40px;
+	    	line-height: 44px;
+	    }
 	}	
 
 
@@ -149,7 +163,7 @@
 	h3 {
 		color: #69767f;
 	    font-weight: normal;
-    	font-size: 16px;
+    	font-size: 12px;
     	text-transform: uppercase;
     	margin-top:15px;
     	line-height: 18px;
@@ -166,9 +180,115 @@
     	}
     } 
 
-	[class*=' blk'], [class^='blk']{
-		background-color:cyan;
+
+}
+
+#homeActiveProjects {
+
+	h1 {
+		width:50%;
+		margin: auto;
+    	padding-top: 250px;
+    	text-align: center;
+    	color:lighten(red,37%);
+	}
+}
+
+#homeBrowse {
+	background-color: #e3e0db;
+    min-height: 270px;
+	
+	@include xs {
+		* {
+			padding: 0px;
+		}
 	}
 
+	.browseLinks { 
+		margin: 0 auto;
+		width:760px;
 
+       	@include xs {
+    		width:90%
+    	}
+
+    	@include md {
+    		width:940px;
+    	}
+
+
+
+		h2 , a {
+			color: #006991;
+		    font-weight: 300;
+		    font-size: 30px;
+		    margin-top: 30px;
+		    text-align: center;
+		    display: block;
+		    width: 100%;
+		    text-transform: uppercase;
+		    text-decoration: none;
+		}
+
+		li {
+
+			float: left;
+		    list-style: none;
+		    text-align: center;
+		    width: 120px;
+		    margin-left: 50px;
+		    margin-right: 50px;
+		    margin-top: 10px;
+		    padding-top: 120px;
+		    padding-left:0px;
+		    padding-right:0px;
+
+		    @include md {
+		    	width: 220px;
+		    	margin-left: 25px;
+		    	margin-right: 25px;
+		    }
+
+		    @include xs {
+
+		    	width:60%;
+		    	display:block;
+		    	margin:auto;
+		    	float:none;
+
+		    }
+		}
+
+		.blk_4 {
+			background: url(/images/icon_retail2.png) no-repeat top center;
+    	}
+
+		.blk_5 {
+ 		   	background: url(/images/icon_services2.png) no-repeat top center;
+    	}
+
+		.blk_6 {
+		    background: url(/images/icon_ideas2.png) no-repeat top center;
+		}
+
+		
+
+		h3 {
+		    color: #006991;
+    		font-weight: 300;
+    		font-size: 16px;
+    		text-transform: uppercase;
+    		line-height: 18px;
+    		height: 45px;
+		}
+
+
+    }
+
+	@include xs {
+	  h2, h3, h4, li  {
+		padding-left:0px;
+		font-size:0.7rem;
+	  }
+	}
 }
