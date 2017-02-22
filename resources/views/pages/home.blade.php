@@ -38,47 +38,45 @@
             </a>
         </div>
     </div>
-    <div id=homeCrowdfunding>
-        <div class="row bannerlinks">
-            <div class="bannerlinks_inside">
+    <div id=homeCrowdfunding class="row categorieslinks">
+        <div class="bannerlinks">
 
                 <div href="#" class="arrowDown"><img alt="" src="/images/arrow_round_down_white.png"></div>
 
                 <h2>Business Crowdfunding</h2>
                 <h4>Kick-starting new businesses in Greece</h4>
-                <div id=ul class=row>
+                <ul id=ul class=topcat>
 
-                    <li class="blk_1 col col-xs-4   col-sm-3  col-md-3  col-lg-3  ">
+                    <li class="blk_1">
                         <h3>FULFILL YOUR DREAMS</h3>
                     </li>
 
-                    <li class="blk_2 col col-xs-4   col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-4 col-lg-offset-1">
+                    <li class="blk_2">
                         <h3>FIND POTENTIAL DONORS</h3>
                     </li>
 
-                    <li class="blk_3 col col-xs-4  col-sm-4 col-md-4  col-lg-4">
+                    <li class="blk_3">
                         <h3>REACH YOUR FUNDING TARGET<br>
                             AND RUN YOUR BUSINESS</h3>
                     </li>
 
-                </div>
+                </ul>
 
-            </div>
+
         </div>
 
     </div>
 
     <div id=homeActiveProjects>
-            <div style="height:600px; background-color:offwhite">
-                <h1> waiting for projects to appear here </h1>
-            </div>
-
+        <div style="height:600px; background-color:offwhite">
+            <h1> waiting for projects to appear here </h1>
+        </div>
     </div>
 
     <div id=homeBrowse class="row categorieslinks">
         <div class="browseLinks">
 
-            <h2><a href="/page/projects">Browse Businesses</a></h2>
+            <h4><a href="/page/projects">Browse Businesses</a></h2>
             <ul class="topcat">
                 <li class="blk_4">
                     <h3>Retail</h3>
