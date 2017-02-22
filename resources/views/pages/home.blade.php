@@ -2,11 +2,11 @@
 
     <div id=homePicturesCarousel>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
+            <!-- <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1" class=""></li>
                 <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-            </ol>
+            </ol> -->
             <div class="carousel-inner" role=listbox>
                 <div class="item active">
                     <div class="hasimg" style="background-image:url('/images/homeBanner1.jpg');">
