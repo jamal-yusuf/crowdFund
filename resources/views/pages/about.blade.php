@@ -86,7 +86,7 @@
                     <br>
                     <br>If you are an investor and would like to participate in a business idea, contact us and we’ll pitch your offer to our intrepid entrepreneur. If they are interested in finding out more, we’ll connect you.
                     <br>
-                    <br>If you have other questions or would like to learn more about One-up, please visit our <a href="http://www.oneup.gr/page/faq">FAQ</a> page.
+                    <br>If you have other questions or would like to learn more about One-up, please visit our <router-link to="/page/faq">FAQ</router-link> page.
                     <br>
                     <br>
                     <br>

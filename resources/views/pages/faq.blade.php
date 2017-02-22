@@ -7,7 +7,7 @@
     <h4 style="font-weight:300;">Do you have any questions?<br>
 If you have any questions, please read the FAQ section. If you need any further assistance, please do not hesitate to contact us.
 </h4>
-    <a href="http://www.oneup.gr/page/contact-us" class="blueBtn">CONTACT US</a>
+    <router-link to="page/contact-us" class="blueBtn">CONTACT US</router-link>
     <div style="clear:both;"></div>
     <div class="accordion" id="accordion2">
         <div class="accordion-group">
@@ -56,7 +56,7 @@ If you have any questions, please read the FAQ section. If you need any further 
         </div>
         <div id="collapseTwo3" class="accordion-body collapse">
             <div class="accordion-inner">
-                The idea and the platform were created by <a href="http://www.oneup.gr/page/associates" target="_blank">Paul Kidner</a> who runs the <a href="http://www.praksis.gr/el/%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%AC%CE%BC%CE%BC%CE%B1%CF%84%CE%B1/%CF%84%CF%81%CE%B5%CF%87%CE%BF%CF%85%CF%83%CE%B5%CF%82-%CF%80%CE%B1%CF%81%CE%B5%CE%BC%CE%B2%CE%B1%CF%83%CE%B5%CE%B9%CF%82/item/business-coaching-center" target="_blank">PRAKSIS BCC</a>. The implementation of the platform sponsored by the Swiss <a href="http://www.limmat.org/" target="_blank">Limmat Foundation</a>. Through the NGO PRAKSIS we can provide monitoring and create even stronger economic and social impact through every successful business you assist through One-up.
+                The idea and the platform were created by <router-link to="/page/team" target="_blank">Paul Kidner</router-link> who runs the <a href="http://www.praksis.gr/el/%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%AC%CE%BC%CE%BC%CE%B1%CF%84%CE%B1/%CF%84%CF%81%CE%B5%CF%87%CE%BF%CF%85%CF%83%CE%B5%CF%82-%CF%80%CE%B1%CF%81%CE%B5%CE%BC%CE%B2%CE%B1%CF%83%CE%B5%CE%B9%CF%82/item/business-coaching-center" target="_blank">PRAKSIS BCC</a>. The implementation of the platform sponsored by the Swiss <a href="http://www.limmat.org/" target="_blank">Limmat Foundation</a>. Through the NGO PRAKSIS we can provide monitoring and create even stronger economic and social impact through every successful business you assist through One-up.
             </div>
         </div>
         <div class="accordion-heading">
@@ -66,7 +66,7 @@ If you have any questions, please read the FAQ section. If you need any further 
         </div>
         <div id="collapseTwo4" class="accordion-body collapse">
             <div class="accordion-inner">
-                The One-up platform is run by the <a href="http://www.praksis.gr/el/%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%AC%CE%BC%CE%BC%CE%B1%CF%84%CE%B1/%CF%84%CF%81%CE%B5%CF%87%CE%BF%CF%85%CF%83%CE%B5%CF%82-%CF%80%CE%B1%CF%81%CE%B5%CE%BC%CE%B2%CE%B1%CF%83%CE%B5%CE%B9%CF%82/item/business-coaching-center" target="_blank">PRAKSIS BCC</a> whose staff is comprised of <a href="http://www.oneup.gr/page/associates" target="_blank">experienced consultants</a>, who review each and every project. Those that we believe are crazy, outlandish, and WILL work are the projects we want to support. But most of all, we want to ensure that your donation goes towards a sustainable business. One that will help an individual, a team or family get a new start, one that will create multiplier effects in a local economy, one that will create a social impact and one, that with just a little financial support, can create a thriving new business and new jobs in the market.
+                The One-up platform is run by the <a href="http://www.praksis.gr/el/%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%AC%CE%BC%CE%BC%CE%B1%CF%84%CE%B1/%CF%84%CF%81%CE%B5%CF%87%CE%BF%CF%85%CF%83%CE%B5%CF%82-%CF%80%CE%B1%CF%81%CE%B5%CE%BC%CE%B2%CE%B1%CF%83%CE%B5%CE%B9%CF%82/item/business-coaching-center" target="_blank">PRAKSIS BCC</a> whose staff is comprised of <router-link to="/page/team" target="_blank">experienced consultants</router-link>, who review each and every project. Those that we believe are crazy, outlandish, and WILL work are the projects we want to support. But most of all, we want to ensure that your donation goes towards a sustainable business. One that will help an individual, a team or family get a new start, one that will create multiplier effects in a local economy, one that will create a social impact and one, that with just a little financial support, can create a thriving new business and new jobs in the market.
                 <br>We believe micro-enterprises and SME’s are the bloodline of the Greek economy and that dedicated new entrepreneurs are the answer to lifting Greece out of the current crisis.
             </div>
         </div>
@@ -94,7 +94,7 @@ If you have any questions, please read the FAQ section. If you need any further 
         <div id="collapseTwo6" class="accordion-body collapse">
             <div class="accordion-inner">
                 The One-up platform was built specifically to support new entrepreneurs in Greece. The crisis in Greece has hit the economy particularly hard. However, there are a lot of fantastic minds and skilled business people with great new ideas in the country with no way to transform their talents and ideas into reality. We are here to support them and the Greek economy. By helping to kick-start new business ventures we hope to create a new start and spark for sustainable new businesses in Greece.
-                <br>We do not consider One-up a charity. We believe One-up is a test-bed for new businesses. A place where entrepreneurs can seek seed-capital for their business ideas. A place where donors can invest in turning an idea into reality. The by-product of this investment creates social impacts that go beyond supporting one individual. Funding a project transforms ideas into business ventures, and helps create multiplier effects within both family units and local economies. Like what you hear? <a href="http://www.oneup.gr/page/donate" target="_blank"><b>Join us</b></a>!
+                <br>We do not consider One-up a charity. We believe One-up is a test-bed for new businesses. A place where entrepreneurs can seek seed-capital for their business ideas. A place where donors can invest in turning an idea into reality. The by-product of this investment creates social impacts that go beyond supporting one individual. Funding a project transforms ideas into business ventures, and helps create multiplier effects within both family units and local economies. Like what you hear? <router-link to="/page/donate" target="_blank"><b>Join us</b></router-link>!
             </div>
         </div>
         <div class="accordion-heading">

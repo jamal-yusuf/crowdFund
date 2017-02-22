@@ -37,7 +37,7 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top"><img src="http://www.oneup.gr/images/team2/vasiliki.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/team2/vasiliki.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td valign="top"><b><font color="333399"><font color="333399">Vassiliki Mouhou</font><br>Marketing and Administrative Assistant</font></b>
                     <br>
                     <br>Studied Shipping at the English College SBE, holder of a BSc in Shipping &amp; Transport Management and worked at multinational companies (Regus, The meeco Group) in Operations and Sales Departments. Gradually she developed within the organization of Regus, specialized in the Customer Service and held the Center Manager position.
@@ -52,7 +52,7 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top"><img src="http://www.oneup.gr/images/team2/stefanos.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/team2/stefanos.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td valign="top">
                     <br><b><font color="333399"><font color="006991"><b><font color="000000"><font color="333399">Stephanos Economides<br>Business Consultant<br></font></font></b></font>
                     </font>
@@ -77,7 +77,7 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top"><img src="http://www.oneup.gr/images/team2/vasilis.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/team2/vasilis.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td valign="top">
                     <font color="006991">
                         <font color="000000"></font>
