@@ -68,7 +68,7 @@
     </div>
 
     <div id=homeActiveProjects>
-        <div style="height:600px; background-color:offwhite">
+        <div style="height:200px; background-color:offwhite">
             <h1> waiting for projects to appear here </h1>
         </div>
     </div>

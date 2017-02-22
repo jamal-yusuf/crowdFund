@@ -29,7 +29,7 @@ $(document).ready(() => {
         var coord=Utils.getCoordinates('#homeCrowdfunding');
         if (coord){
             $("body").animate({
-                scrollTop : coord.top + window.scrollY
+                scrollTop : coord.bottom + window.scrollY
             }, 600);
         }
         return false;
