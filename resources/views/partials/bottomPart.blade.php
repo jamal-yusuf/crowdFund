@@ -64,10 +64,10 @@
 
                     <ul class="socialfooter">
                         <h4>FOLLOW US</h4>
-                        <li class="fb"><a href="https://www.facebook.com/EXAMPLE.bcc/" target="_blank"><img hidden src="/images/social/fb-off.png" width="48" height="48"></a></li>
-                        <li class="tw" style="display:none"><a href="#" target="_blank"><img src="/images/social/tw-off.png" width="48" height="48"></a></li>
-                        <li class="gg" style="display:none"><a href="#"><img src="/images/social/g-off.png" width="48" height="48"></a></li>
-                        <li class="rss" style="display:none"><a href="#"><img src="/images/social/rss-off.png" width="48" height="48"></a></li>
+                        <li class="fb"><a href="https://www.facebook.com/EXAMPLE.bcc/" target="_blank"><img hidden src="/images/fb-off.png" width="48" height="48"></a></li>
+                        <li class="tw" style="display:none"><a href="#" target="_blank"><img src="/images/tw-off.png" width="48" height="48"></a></li>
+                        <li class="gg" style="display:none"><a href="#"><img src="/images/g-off.png" width="48" height="48"></a></li>
+                        <li class="rss" style="display:none"><a href="#"><img src="/images/rss-off.png" width="48" height="48"></a></li>
                     </ul><!-- /socialfooter -->
                      </form>
                 </div>

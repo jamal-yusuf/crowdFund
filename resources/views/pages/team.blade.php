@@ -7,7 +7,7 @@
     <table style="margin-left: 27px;" class="howItWorksTable" height="1346" border="0" cellpadding="0" width="100%">
         <tbody>
             <tr>
-                <td valign="top"><img src="/images/team2/adriani.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/adriani.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td valign="top"><span style="background-color: rgb(255, 255, 255);"><font color="006991"><b><font color="333399"><font color="333399">Ariadne Lada<br>Program Manager – Strategy and Communications &amp; Business Coach<br><br></font></font></b><font color="000000">Ariadne studied Psychology at The American College of Greece, and pursued a career in Human Resources Management with companies such as Egnatia Bank SA, Athens 2004, ING Group, Ashland Hellas SA, gradually assuming positions of greater responsibility, with last that of Head of HR with Amgen Hellas SA. During the 12 years she has worked with large companies, Ariadne managed to acquire substantial experience in the areas of recruiting, performance appraisal, learning &amp; development, talent management, working on company culture&amp; values, as well as fostering open and transparent internal communication lines. <br>Having a great interest in the human capital, Ariadne completed a post graduate diploma in Executive Coaching &amp; Organizational Development in 2012, and an extensive training in Rational Emotive Cognitive Behavioral Coaching in 2015.<br>Since 2012 she has been working as an Executive Coach and OD Consultant.&nbsp; She is currently member of the BOD of the Hellenic Coaching Association, holding the role of Marketing &amp; Communications Director.<br>Ariadne has been working for the BCC since its very beginning, and is currently the program manager, responsible for Strategy &amp; Communications, as well as a business coach.<b><br></b><b><br></b></font></font><br></span></td>
             </tr>
             <tr>
@@ -19,7 +19,7 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top"><img src="/images/team2/viky.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/viky.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td style="padding-bottom:20px;" valign="top">
                     <font color="006991"><b><font color="333399"><font color="000000"><font color="000080"><span style="background-color: rgb(255, 255, 255);">Vicky Charitou<br>Program Manager –Strategy and Human Resources &amp; Business Coach</span></font><br></font></font></b>
                         <font color="333399">
@@ -37,7 +37,7 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top"><img src="/images/team2/vasiliki.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/vasiliki.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td valign="top"><b><font color="333399"><font color="333399">Vassiliki Mouhou</font><br>Marketing and Administrative Assistant</font></b>
                     <br>
                     <br>Studied Shipping at the English College SBE, holder of a BSc in Shipping &amp; Transport Management and worked at multinational companies (Regus, The meeco Group) in Operations and Sales Departments. Gradually she developed within the organization of Regus, specialized in the Customer Service and held the Center Manager position.
@@ -52,7 +52,7 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top"><img src="/images/team2/stefanos.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/stefanos.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td valign="top">
                     <br><b><font color="333399"><font color="006991"><b><font color="000000"><font color="333399">Stephanos Economides<br>Business Consultant<br></font></font></b></font>
                     </font>
@@ -77,7 +77,7 @@
                 </td>
             </tr>
             <tr>
-                <td valign="top"><img src="/images/team2/vasilis.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
+                <td valign="top"><img src="/images/vasilis.png" style="width:150px; padding-right:40px; padding-bottom:20px;"></td>
                 <td valign="top">
                     <font color="006991">
                         <font color="000000"></font>
