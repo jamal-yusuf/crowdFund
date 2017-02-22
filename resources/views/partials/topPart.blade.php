@@ -6,13 +6,23 @@
     </div>
     <div id=brandAndMenu class="row">
         <div id=brand class='col col-sm-4'>  <router-link to="/"><img src="/images/logo.png"></router-link> </div>
-        <div id=topMenuWrap  class='hidden-xs'>
-            <ul id="topMenu">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topMenuWrap">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+        </button>
+        <div id=topMenuWrap  class='navbar-collapse collapse'>
+            <ul id="topMenu" >
                 <li id="pageabout"><router-link to="/page/about">About</router-link></li>
                 <li id="pageworks"><router-link to="/page/howitworks">HOW IT WORKS</router-link></li>
                 <li id="pagedonors"><router-link to="/page/donate">DONATE</router-link></li>
                 <li id="pageregister"><router-link to="/page/register/">Launch</router-link></li>
-                <li class="dropdown" id="pagemore">
+                <li class=visible-xs ><router-link tabindex="-1" to="/page/team">TEAM</router-link></li>
+                <li class=visible-xs ><router-link tabindex="-1" to="/page/partners">PARTNERS</router-link></li>
+                <li class=visible-xs ><a tabindex="-1" href="http://oneupgr.tumblr.com/" target="_blank">BLOG</a></li>
+                <li class=visible-xs ><router-link tabindex="-1" to="/page/faq">FAQs</router-link></li>
+
+                <li class="hidden-xs dropdown" id="pagemore">
                     <a tabindex="-1" href="#" data-toggle="dropdown" class="dropdown-toggle">More</a>
                     <ul class="dropdown-menu " style="margin-left: -60px; margin-top: 22px;">
                         <li><router-link tabindex="-1" to="/page/team">TEAM</router-link></li>
@@ -21,9 +31,13 @@
                         <li><router-link tabindex="-1" to="/page/faq">FAQs</router-link></li>
                     </ul>
                 </li>
+                <li class="loginlink visible-xs"><a id="navbar-login" href="/simple-login">LOGIN</a></li>
             </ul>
         </div>
-        <div id=topActionsWrap class='pull-right'>
+
+
+
+        <div id=topActionsWrap class='pull-right hidden-xs'>
             <ul id=topActions class="pull-right">
                 <li  class="searchwrap">
                     <form class="form-search" method="POST" action="/search">
@@ -44,6 +58,7 @@
 
       </div>   <!-- actions -->
     </div> <!-- brandAndMenu -->
+
 </div> <!-- topPart -->
 
 

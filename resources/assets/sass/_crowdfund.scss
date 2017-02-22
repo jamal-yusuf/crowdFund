@@ -32,11 +32,22 @@ $sm: 767px;
 $md: 991px;
 $lg: 1199px;
 
+@mixin xxs {
+    @media (max-width: 530px) { @content; }
+} 
 @mixin xs {
     @media (max-width: 767px) { @content; }
 } 
 @mixin sm {
     @media (min-width: 768px) { @content; }
+}
+
+@mixin maxW($w) {
+    @media (max-width: $w) { @content; }
+}
+
+@mixin minW($w) {
+    @media (min-width: $w) { @content; }
 }
  
 @mixin md {
@@ -47,6 +58,38 @@ $lg: 1199px;
     @media (min-width: 1200px) { @content; }
 }
  
+
+@include sm{
+   .container {
+         width: 100%;
+    }
+}
+
+@include xs{
+   .container {
+         width: 100%;
+    }
+}
+
+@include sm {
+  .container {
+      width: 100%;
+  }
+}
+
+
+
+@include md {
+  .container {
+      width: 940px;
+  }
+}
+
+@include lg {
+  .container {
+      width: 940px;
+  }
+}
 
 
 #cssMode {
@@ -70,16 +113,17 @@ $lg: 1199px;
 }
 
 
-* {
-        box-sizing: border-box !important;
-        :hover {
-          border:thin solid red;
-        }
-}
+// * {
+//         box-sizing: border-box !important;
+//         :hover {
+//           border:thin solid red;
+//         }
+// }
 
 body {
 	font-family: 'Open Sans', sans-serif !important;
 	line-height:20px;
+  background-color:white;
 }
 
 html,body{
@@ -97,14 +141,58 @@ html,body{
 @import "bottomPart";
 
 #stub{
+    text-align: center;
+    justify-content: center;
+    font-size: 32px;
+    padding: 60px;
+    line-height: 50px;
+    margin-bottom: 50px;
+    border: 1px solid darkgray;
     background-image: url("/images/minions-at-work.jpg");
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size:cover;
     background-position:center;
     height:561px;
+    @include xs {
+         background-size:cover;
+         font-size:20px;
+         line-height: 30px;
+
+    }
+    @include lg {
+         background-size:contain;
+         font-size:40px;
+         line-height: 50px;
+         padding: 80px;
+
+    }
 }
 
-@import "homePage";
+
+.blueBtn {
+    background: #006991 !important;
+    padding: 10px 25px;
+    color: #FFF !important;
+    margin: 0px auto;
+    min-width: 150px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 300 !important;
+    border: none;
+}
+
+
+@import "pages/homePage";
+
+@import "pages/textPages";
+
+
 
 @include xs {
 

@@ -1,0 +1,421 @@
+
+
+
+#homePage {
+
+	& , #homePicturesCarousel {
+		position:relative;
+		top:0px;
+	    margin-bottom: 0;
+		width:100%;
+	}
+
+
+
+	#myCarousel {
+	    margin-bottom: 0;
+	    height: 100%;
+
+		.carousel-indicators li { 
+			visibility: hidden;
+		}
+
+		@include xs {
+			.carousel-inner .item {
+				&:nth-child(2) .hasimg {
+				    background-position: center 0px;				
+				}
+
+				&:nth-child(3) .hasimg {
+				    background-position: 0px 0px;				
+				}
+			}
+		}
+
+	 	.hasimg {
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    background-position: 0px 0px;
+		   
+			@include xs {
+				& , div {
+				    background-position: center 0px;
+				    background-size:cover;
+				  }
+
+			}
+
+			.carousel-inner-div {
+				
+			    text-align: center;
+			    padding-top: 0;
+			    position: relative;
+			    height: 735px;
+			    margin:auto;
+			    position:relative;
+
+			    @include xs {
+				    height:350px;
+				    width: 86% !important;
+	    			margin-left: 20px;
+	    			margin-right: 20px;
+				}
+
+
+			    
+			   
+
+				.startBtn {
+					cursor:pointer;
+					position :relative;
+				    background: white;
+				    border: none;
+				    padding: 20px 10px;
+				    color: #006991;
+				    font-weight: 400;
+				    font-size: 24px;
+				    width:240px;
+				    top:77%;
+			
+					@include xs {
+						font-size:20px;
+						padding:15px 5px;
+					    width: 200px;
+	    				position: relative;
+	    				left: 4vw;
+					}
+
+					&:hover:not(:active) {
+			            box-shadow: 5px 5px 5px 4px rgba(22,15,33,0.6);
+					}
+					&:active {
+			            box-shadow:  3px 3px 3px 3px rgba(22,15,33,0.6) inset;
+					}
+				}
+			}
+		}
+	}
+
+	.bannerlinks {
+	    background: url(/images/line.jpg) repeat-x bottom #e3e0db;
+	    position:relative;
+
+
+	    .bannerlinks_inside {
+	    	position:relative;
+	 		margin: 0 auto;
+	    	max-width: 800px;
+	    	height: 125px;
+	    	padding:0px;
+
+			@include xs{
+		    	max-width: 740px;
+			}
+
+	    	@include md{
+		    	max-width: 940px;
+			}
+
+		}
+
+		.arrowDown {
+			top:-100px;
+	    	position: relative;
+	    	cursor: pointer;
+	    	width:65px;
+	    	margin:auto;
+	    	img {
+	    		display:inline-block;
+	    		margin:auto;
+	    		
+	    	}
+
+	    	@include xs {
+	    		display:none;
+	    	}
+		}
+
+		
+		h2, h4 {
+	    	text-align: center;
+	    	color: #006991;
+	    	text-transform: uppercase;
+		    font-weight: 300;
+		}
+
+	    h2 {
+		    margin: auto;
+		    font-size: 50px;
+		    padding-bottom: 30px;
+
+		    @include md {
+		    	font-size :64px;
+		    }
+	 		
+	 		@include xs {
+		    	font-size :30px;
+		    	 padding-bottom: 5px;
+		    	  line-height:40px;
+		    }
+
+		}
+
+		h4 {
+			margin: 40px 50px 0px 50px;
+		    font-size: 30px;
+		    line-height: 32px;
+
+		    @include md {
+		    	font-size:40px;
+		    	line-height: 44px;
+		    }
+
+		    @include xs {
+		    	margin: 5px 5px;
+		    	font-size :20px;
+		    	 padding-bottom: 22px;
+		    }
+		}	
+
+
+		#ul , ul {
+			text-align:center;
+			vertical-align:top;
+			padding-top:40px;
+			padding-left:40px;
+			text-decoration:none;
+					    list-style: none;
+
+			li, div {
+				text-decoration:none;	
+						    list-style: none;
+			
+			}
+
+			@include xs {
+				padding-left:5px;
+				padding-right:5px;
+				padding-top:5px;
+				margin-left:5px;
+				margin-right:5px;
+
+			}
+			@include sm {
+				padding-left:40px;
+			}
+			@include md {
+				padding-left:40px;
+			}
+		}
+
+
+		.blk_1 {
+	    	background: url(/images/icon_dreams.png) no-repeat top center;
+	    	padding-top: 110px;
+		}
+
+		.blk_2 {
+	 	   	background: url(/images/icon_donors.png) no-repeat top center;
+	    	padding-top: 110px;
+	    	
+
+		}
+
+		.blk_3 {
+		    background: url(/images/icon_target.png) no-repeat top center;
+		    padding-top: 110px;
+		}
+
+		@include xs {
+			[class*=' blk_'], [class^='blk_']{
+			    background-size: 45%;
+			     padding-top: 30px;
+			     padding-bottom: 100px;
+
+			     h3 {
+			     	position:relative;
+			     	top:12vw;
+			     }
+			}
+		}
+
+		h3 {
+			color: #69767f;
+		    font-weight: normal;
+	    	font-size: 12px;
+	    	text-transform: uppercase;
+	    	margin-top:15px;
+	    	line-height: 18px;
+	    	height: 45px;
+
+	    	@include sm {
+	    		font-size:12px;
+	    	}
+	    	@include md {
+	    		font-size:14px;
+	    	}
+	    	@include lg {
+	    		font-size:16px;
+	    	}
+
+	    	@include xs {
+	    		font-size:11px;
+	    		margin:1px 5px;
+	    	    line-height: 11px;
+	    	}
+	   
+		
+	    } 
+	}
+
+	#homeActiveProjects {
+		display:none;
+
+		h1 {
+			width:50%;
+			margin: auto;
+	    	padding-top: 250px;
+	    	text-align: center;
+	    	color:lighten(red,37%);
+		}
+	}
+
+	#homeBrowse {
+		background-color: #e3e0db;
+	    min-height: 270px;
+		
+		@include xs {
+			* {
+				padding: 0px;
+			}
+		}
+
+		.browseLinks { 
+			margin: 0 auto;
+			width:760px;
+
+	       	@include xs {
+	    		width:90%
+	    	}
+
+	    	@include md {
+	    		width:940px;
+	    	}
+
+
+
+			h2 , a {
+				color: #006991;
+			    font-weight: 300;
+			    font-size: 30px;
+			    margin-top: 30px;
+			    text-align: center;
+			    display: block;
+			    width: 100%;
+			    text-transform: uppercase;
+			    text-decoration: none;
+			}
+
+			li {
+
+				float: left;
+			    list-style: none;
+			    text-align: center;
+			    width: 120px;
+			    margin-left: 50px;
+			    margin-right: 50px;
+			    margin-top: 10px;
+			    padding-top: 120px;
+			    padding-left:0px;
+			    padding-right:0px;
+
+			    @include md {
+			    	width: 220px;
+			    	margin-left: 25px;
+			    	margin-right: 25px;
+			    }
+
+			    @include xs {
+
+			     	width:33%;
+			     	margin:auto;
+			     	padding-top: 20vw;
+			     }
+			}
+
+			.blk_4 {
+				background: url(/images/icon_retail2.png) no-repeat top center;
+	    	}
+
+			.blk_5 {
+	 		   	background: url(/images/icon_services2.png) no-repeat top center;
+	    	}
+
+			.blk_6 {
+			    background: url(/images/icon_ideas2.png) no-repeat top center;
+			}
+
+			
+
+			h3 {
+			    color: #69767f; // same as crowdfunding above
+			    //color: #006991;
+	    		font-weight: normal;
+	    		font-size: 12px;
+	    		text-transform: uppercase;
+	    		line-height: 18px;
+	    		height: 45px;
+		
+
+		    	@include sm {
+		    		font-size:12px;
+		    	}
+		    	@include md {
+		    		font-size:14px;
+		    	}
+		    	@include lg {
+		    		font-size:16px;
+		    	}
+
+		    	@include xs {
+		    		font-size:11px;
+		    		margin:1px 5px;
+		    	    line-height: 11px;
+		    	}
+			}
+
+		}
+	}
+
+	@include xs {
+		[class*=' blk_'], [class^='blk_']{
+	     background-size: 60%;
+	    
+		     h3 {
+				font-size: 14px;
+				line-height: 14px;
+				height: 25px;
+		     }
+		}
+	}	
+
+	@include xxs {
+		[class*=' blk_'], [class^='blk_']{
+		    
+		     h3 {
+				font-size: 12px;
+				line-height: 12px;
+				height: 22px;
+		     }
+		}
+	}	
+
+
+	@include xs {
+		h2, h3, h4, li  {
+			padding-left:0px;
+			font-size:0.7rem;
+		}
+	}
+
+}

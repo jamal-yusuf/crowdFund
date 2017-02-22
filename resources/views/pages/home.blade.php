@@ -48,18 +48,18 @@
                 <h4>Kick-starting new businesses in Greece</h4>
                 <div id=ul class=row>
 
-                    <div class="blk_1 col col-xs-12  col-sm-3  col-md-3  col-lg-3  ">
+                    <li class="blk_1 col col-xs-4   col-sm-3  col-md-3  col-lg-3  ">
                         <h3>FULFILL YOUR DREAMS</h3>
-                    </div>
+                    </li>
 
-                    <div class="blk_2 col col-xs-12  col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-4 col-lg-offset-1">
+                    <li class="blk_2 col col-xs-4   col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 col-lg-4 col-lg-offset-1">
                         <h3>FIND POTENTIAL DONORS</h3>
-                    </div>
+                    </li>
 
-                    <div class="blk_3 col col-xs-12  col-sm-4 col-md-4  col-lg-4">
+                    <li class="blk_3 col col-xs-4  col-sm-4 col-md-4  col-lg-4">
                         <h3>REACH YOUR FUNDING TARGET<br>
                             AND RUN YOUR BUSINESS</h3>
-                    </div>
+                    </li>
 
                 </div>
 

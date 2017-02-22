@@ -1,0 +1,99 @@
+#pageAbout.container.pagewrap ,
+#pageDonate.container.pagewrap ,
+#pagePartners.container.pagewrap ,
+#pageTeam.container.pagewrap ,
+#pageHowItWorks.container.pagewrap ,
+#pageTeam.container.pagewrap ,
+#pageFaq.container.pagewrap ,
+ {
+
+
+    font-size: 13px;
+    padding-bottom: 20px;
+    text-align: justify;
+
+    p , td  {
+        text-align: justify;
+    }
+    a {
+        color: #000;
+        font-weight: 600;
+    }
+    table {
+        max-width: 97%;
+
+    }
+    h1 {
+        text-transform: uppercase;
+        color: #000;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    @include maxW(800px) {
+        padding-left: 5px;
+        padding-right: 5px;
+        .howItWorksTable {
+            margin-left: 0 !important;
+            img {
+                display: none;
+            }
+        }
+    }
+
+
+    #donateTd_1a, #donateTd_2a {
+
+        img {
+            width:110px;
+            margin-right: 40px; 
+        
+            max-width:150px; 
+            padding-bottom:20px;
+        
+        }
+    }
+
+    @include minW(801px) {
+
+       #donateTd_1a, #donateTd_2a { 
+            width:6vw;
+        }
+
+       #donateTd_1b, #donateTd_2b { 
+            width:94vw;
+        }
+
+    } 
+
+}
+
+
+
+.accordion .accordion-heading a.accordion-toggle {
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+
+.accordion .accordion-heading a, .accordion .accordion-heading a b {
+    font-weight: 300 !important;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.accordion-heading .accordion-toggle {
+    display: block;
+    padding: 8px 15px;
+}
+.accordion .accordion-heading a.accordion-toggle:before {
+    content: url(/images/arrowright.png);
+    position: absolute;
+    margin-top: -4px;
+    margin-left: -29px;
+    height:60px;
+}
+
+.accordion-inner {
+    padding: 9px 15px;
+    border-top: 1px solid #e5e5e5;
+}

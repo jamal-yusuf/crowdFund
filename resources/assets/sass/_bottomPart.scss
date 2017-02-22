@@ -31,6 +31,12 @@
         margin-bottom: 30px;
         margin-top: 90px;
         font-size: 36px;
+
+
+        @include xxs {
+            margin-bottom: 10px;
+            margin-top:10px;
+        }
     }
     a.white_btn ,  a.blue_btn {
         position: relative;
@@ -47,6 +53,18 @@
         }
         &:hover:active {
             box-shadow: 2px 2px 3px 4px rgba(12,12,23,0.6) inset;
+        }
+        @include xxs {
+            font-size: 12px;
+            width: 32%;
+            min-width: 40px;
+            padding: 3px 3px;
+            display: block;
+            padding: 3px 3px;
+            height: 4em;
+            margin: 15px auto;
+            
+
         }
     }
 }
@@ -94,13 +112,78 @@
     padding: 20px 0;
 	margin-top:20px;
 	margin-bottom:40px;
+
+    @include xs {
+        padding-left : 5px;
+        padding-right : 5px;
+        margin:auto;
+        #platformOf {
+            text-align:center;
+            display:block;
+            position:relative;
+            width:100%;
+        }
+    }    
+
+    div.img {
+        float:left;
+        margin-top: 45px;
+        @include xxs {
+            float:none;
+            display:block-inline;
+            width:60%;
+            border:none;
+            justify-content:center;
+            padding-top:15px;
+            margin: auto;
+            img {
+                border: none;
+                
+            }
+        }
+
+    }
+
+    #img1 {
+        border-right:solid 2px #505050; 
+        margin-right:10px;
+        @include xxs {
+            border:none;
+        }
+
+    }
+
+
+    
 }
 
-#footerLinksPart1 a h4 {
-    color:inherit;
-    @include xs{
-        text-align:center;
-        width:100%;
+#footerLinksPart1 {
+    .span2 {
+
+        @include sm {
+            a:last-child , a:nth-child(2) {
+                h4 {
+                    width:200%;
+                }
+            }
+        }
+    }
+
+    a { 
+
+        h4{
+            color:inherit;
+            font-size:16px;
+
+            @include md {
+                font-size:18px;
+            }
+
+            @include xs {
+                text-align:center;
+                width:100%;
+            }
+        }
     }
 }
 
@@ -139,19 +222,32 @@
     text-decoration: underline;
 }
 
-#footerLinksPart2 img  {
-    margin-top: 45px;
-}
 
+   @include maxW(880px){
+    .formWrapper {
+              
+        display:block;
+        margin-top:30px;
+        
+        margin:auto;   
+ 
+        }
+    }
 
 #newsletter-form {
-    float: left;
-    width: 380px;
+    float: right;
+    max-width: 370px;
     margin-top: 10px;
-    margin-left: 40px;
     margin-bottom: 0;
-}
+    margin-right:0px;
+    display:block;
+    padding-left:14px;
 
+
+    @include maxW(880px){
+       float:left;
+    }
+}
 #newsletter-form legend {
     color: #fff;
     font-size: 18px;
@@ -159,15 +255,27 @@
     border-bottom: none;
     font-weight: 300;
     text-transform: uppercase;
+    @include xxs {
+        font-size:14px;
+    }
 }
 
 #newsletter-form input[type=text] {
     padding: 10px 20px;
     margin-top: 20px;
     margin-right: 3px;
-    width: 265px;
+    width: 20vw;
     border :1px;
     border-radius: 0 !important;
+
+    @include maxW(880px){
+        width:260px;
+    }
+    @include md {
+        width: 265px;
+
+    }
+
 }
 
 
@@ -178,8 +286,9 @@
 }
 
 .socialfooter {
-	margin-top: 10px;
-    float: left;
+    clear:both;
+    float:left;
+    padding-left:0px;
 }
 
 .socialfooter h4 {

@@ -1,3 +1,6 @@
+$menuBackground:rgba(248, 252, 255, 1);
+
+
 #topPart {
     position: relative;
     padding: 0px 0px 0px 0px;
@@ -5,11 +8,10 @@
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    height: 203px;
     background: #fff;
     border-bottom:solid 1px #eee;
     border-left:none;
-    height:215px;
+    min-height:215px;
     flex-grow:1;
 }
 
@@ -29,21 +31,69 @@
 	margin-left:auto;
 	margin-right:auto;
 	top:40px;
-	height:150px;
+	min-height:150px;
+
+    button.navbar-toggle {
+        z-index:10;
+        margin-right: 5px;
+        margin-left: 18px;
+        bottom: 22px;
+        margin-bottom: 18px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        
+        span.icon-bar{
+            background-color:gray;
+        }
+
+    }
+}
+
+@include xs {
+    #brand {
+        position: relative;
+        margin: auto;
+        width: 221px;
+        height: 200px;
+    }
 }
 
 #topMenuWrap{
 	position:absolute;
 	bottom:0px;
 	left:200px;
+
+    @include xs {
+        position:relative;
+        width:100%;
+        margin:0px;
+        padding:0px;
+        left:0px;
+        top:-30px;
+        overflow:hidden;
+        clear:both;
+        z-index:8;
+   
+    }
 }
 
 #topMenu , #topMenu li {
 	list-style: none;
+
+    @include xs {
+        width:100%;
+        margin:0px;
+        padding:0px;
+    }
 }
 
 #topMenu>li {
 	display: inline;
+    @include xs {
+        display:block;
+    }
 }
 
 ul#topMenu a {
@@ -56,18 +106,31 @@ ul#topMenu a {
     font-weight: 300;
     list-style: none;
     padding-right: 10px;
+    @include xs {
+        display:block;
+        width:100%;
+        margin:0px;
+        text-align:center;
+        padding-left:0px;
+        padding-right:0px;
+        background-color: $menuBackground;
+        border:1px solid white;
+
+    }
 }
 
-ul#topMenu>li>a { 
-	border-right: solid 1px #006991;
+@include sm {
+    ul#topMenu>li>a { 
+    	border-right: solid 1px #006991;
+
+    }
+
+
+    ul#topMenu>li:last-child>a {
+    	    border-right: none;
+
+    }
 }
-
-
-ul#topMenu>li:last-child>a {
-	    border-right: none;
-
-}
-
 
 
 #topActionsWrap {
@@ -99,14 +162,33 @@ ul#topActions {
 #topPart a{
     
     color:black;
+    
+    :focus {
+        outline:none;
+    }
 
     &.router-link-active ,  {
 	   color:#0088cc;
+       @include xs {
+            text-decoration:none;
+            background-color:rgb(116, 172, 199);
+            color:rgb(214, 218, 220);
+        }
     }
 
-    &:not(.router-link-active):hover {
-        color:#0088cc;
-        text-decoration:underline;
+    @include sm {
+        &:not(.router-link-active):hover {
+            color:#0088cc;
+            text-decoration:underline;
+        }
+    }
+
+    @include xs {
+        &:hover {
+            text-decoration:none;
+            background-color:#0088cc;
+            color:white;
+        }
     }
 }
 
@@ -186,6 +268,9 @@ div.searchwform{
 
 @media screen and (max-width: 450px) {
     #topLogos {
-        font-size: 11px;
+        font-size: 11px !important;;
+        img {
+        width: 14% !important;
+        }
     }
 }

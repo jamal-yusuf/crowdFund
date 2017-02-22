@@ -8,6 +8,7 @@
     </div> <!-- bring2life -->
 
     <div id=restOfFooter class=row>
+<div class=container>
         <div id=footerLinksPart1 class='row'>
           <div class=row>
             <div class="col col-sm-2 span2">
@@ -34,16 +35,21 @@
         </div> <!-- footerLinksPart1 -->
 
         <div id=footerLinksPart2 class=row>
+        <div class=container>
             <div class="span12" style="position:relative;">
                 <div id="platformOf">
                     ΜΙΑ ΠΛΑΤΦΟΡΜΑ ΤΗΣ <a href="http://www.EXAMPLE.gr/" target="_blank">EXAMPLE</a> ΓΙΑ ΤΟ ΠΡΟΓΡΑΜΜΑ
                     <a href="http://www.EXAMPLE.gr/example" target="_blank">example</a>
                 </div>
 
-                <a href="http://www.EXAMPLE.gr/" target="_blank"><img src="/images/logo_footer2.png" style="float:left; border-right:solid 2px #505050; margin-right:10px;" class="footerlogo"></a>
-                <a href="http://www.EXAMPLE.gr/example" target="_blank"><img src="/images/logo_footer.png" style="float:left;" class="footerlogo"></a>
+                <div class=img><a href="http://www.EXAMPLE.gr/" target="_blank">
+                    <img id=img1 src="/images/logo_footer2.png" class="footerlogo">
+                </a></div>
+                <div class=img><a href="http://www.EXAMPLE.gr/example" target="_blank">
+                    <img id=img2 src="/images/logo_footer.png"  class="footerlogo">
+                </a></div>
 
-                <div>
+                <div class=formWrapper>
                     <form id="newsletter-form" name="global.NewsletterForm" action="/page/about" method="post">
                         <fieldset>
                             <legend>Subscribe to our Newsletter</legend>
@@ -54,17 +60,19 @@
                                 </div>
                             </div>
                         </fieldset>
-                    </form>
+
 
                     <ul class="socialfooter">
                         <h4>FOLLOW US</h4>
-                        <li class="fb"><a href="https://www.facebook.com/EXAMPLE.bcc/" target="_blank"><img src="/images/social/fb-off.png" width="48" height="48"></a></li>
+                        <li class="fb"><a href="https://www.facebook.com/EXAMPLE.bcc/" target="_blank"><img hidden src="/images/social/fb-off.png" width="48" height="48"></a></li>
                         <li class="tw" style="display:none"><a href="#" target="_blank"><img src="/images/social/tw-off.png" width="48" height="48"></a></li>
                         <li class="gg" style="display:none"><a href="#"><img src="/images/social/g-off.png" width="48" height="48"></a></li>
                         <li class="rss" style="display:none"><a href="#"><img src="/images/social/rss-off.png" width="48" height="48"></a></li>
                     </ul><!-- /socialfooter -->
+                     </form>
                 </div>
             </div>  <!-- span12 -->
+            </div>
         </div> <!-- footerLinks -->
 
         <div id=copyright class="row">
@@ -73,5 +81,6 @@
         </div>
         </div>
         <a href="#" class="scrollup">Scroll</a>
+        </div>
     </div> <!-- rest of footer -->
 </div> <!-- bottomPart -->
