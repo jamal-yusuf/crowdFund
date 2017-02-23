@@ -28,42 +28,46 @@ input[type="color"]:focus,
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
-$sm: 767px;
-$md: 991px;
-$lg: 1199px;
+$xxs:   530px;
+$xs:    767px;
+$sm:    768px;
+$smd:   800px;
+$md:    991px;
+$lg:   1199px;
 
-@mixin xxs {
-    @media (max-width: 530px) { @content; }
-} 
-@mixin xs {
-    @media (max-width: 767px) { @content; }
-} 
-@mixin sm {
-    @media (min-width: 768px) { @content; }
-}
+
+
 
 @mixin maxW($w) {
-    @media (max-width: $w) { @content; }
+    @media screen and (max-width: $w) {@content;}
 }
 
 @mixin minW($w) {
-    @media (min-width: $w) { @content; }
+    @media screen and (min-width: $w) {@content;}
 }
  
-@mixin md {
-    @media (min-width: 992px) { @content; }
-}
- 
-@mixin lg {
-    @media (min-width: 1200px) { @content; }
-}
- 
+@mixin xxs {
+    @include maxW($xxs) {@content;}
+} 
 
-@include sm{
-   .container {
-         width: 100%;
-    }
-}
+@mixin xs {
+    @include maxW($xs) {@content;}
+} 
+
+@mixin sm {
+    @include minW($sm) {@content;}
+} 
+
+@mixin md {
+    @include minW($md) {@content;}
+} 
+
+@mixin lg {
+    @include minW($lg) {@content;}
+} 
+
+
+ 
 
 @include xs{
    .container {
@@ -76,8 +80,6 @@ $lg: 1199px;
       width: 100%;
   }
 }
-
-
 
 @include md {
   .container {
@@ -109,6 +111,43 @@ $lg: 1199px;
       padding:0px;
       margin:0px auto;
 
+  }
+
+  @include xxs {
+    background-color:red;
+  }
+
+  @include xs {
+    background-color:orange;
+    color:blue;
+  }
+
+   @include xxs {
+    background-color:red;
+    color:yellow;
+  }
+
+  @include sm {
+    background-color:yellow;
+  }
+  @include md {
+    background-color:cyan;
+  }
+  @include lg {
+    background-color:green;
+    color:yellow;
+  }
+
+}
+
+.visible-xxs {
+  display:none !important;
+}
+
+
+@include xxs{
+  .visible-xxs {
+    display:block !important;
   }
 }
 

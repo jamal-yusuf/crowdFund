@@ -29,7 +29,8 @@
         font-size: 24px;
         font-weight: 300;
     }
-    @include maxW(800px) {
+
+    @include maxW($smd) {
         padding-left: 5px;
         padding-right: 5px;
         .howItWorksTable {
