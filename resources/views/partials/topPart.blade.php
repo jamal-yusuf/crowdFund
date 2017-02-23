@@ -31,7 +31,22 @@
                         <li><router-link tabindex="-1" to="/page/faq">FAQs</router-link></li>
                     </ul>
                 </li>
-                <li class="loginlink visible-xs"><a id="navbar-login" href="/simple-login">LOGIN</a></li>
+                @if (Auth::guest())
+                    <li class="loginlink visible-xs">><a id="navbar-login" href="{{ route('login') }}">LOGIN</a></li>
+                @else
+                    <li class="loginlink visible-xs">
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                @endif
+
             </ul>
         </div>
 
@@ -47,7 +62,30 @@
                             </div>
                     </form>
                 </li>
-                <li class="loginlink"><a id="navbar-login" href="/simple-login">LOGIN</a></li>
+
+                @if (Auth::guest())
+                    <li class="loginlink"><a href="{{ route('login') }}">LOGIN</a></li>
+                @else
+                    <li class="loginlink dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endif
                 <li class="dropdown" ><a href="#" class="dropdown-toggle" data-toggle="dropdown">Language <b class="caret"></b> </a>
                     <ul class="dropdown-menu">
                         <li class="active"><a href="/homepage?request_locale=en">English</a></li>

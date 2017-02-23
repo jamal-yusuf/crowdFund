@@ -13,10 +13,10 @@
 
 Auth::routes();
 
-Route::get('/', 'PageController@homePage');
+Route::middleware('auth')->get('/', 'PageController@homePage');
 
-Route::get('/home', 'PageController@homePage');
+Route::middleware('auth')->get('/home', 'PageController@homePage');
 
-Route::get('/homepage', 'PageController@homePage');
+Route::middleware('auth')->get('/homepage', 'PageController@homePage');
 
-Route::any('/page/{page}', 'PageController@page');
+Route::middleware('auth')->any('/page/{page}', 'PageController@page');
