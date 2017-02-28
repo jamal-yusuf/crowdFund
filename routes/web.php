@@ -15,8 +15,10 @@ Auth::routes();
 
 Route::middleware('auth')->get('/', 'PageController@homePage');
 
-Route::middleware('auth')->get('/home', 'PageController@homePage');
+Route::middleware('auth')->get('/home', function () {return redirect('/', 301);});
 
-Route::middleware('auth')->get('/homepage', 'PageController@homePage');
+Route::middleware('auth')->get('/homepage', function () {return redirect('/', 301);});
+
+Route::middleware('auth')->get('/page/home', function () {return redirect('/', 301);});
 
 Route::middleware('auth')->any('/page/{page}', 'PageController@page');
