@@ -10,3 +10,8 @@ Homestead.yaml
 /.phpintel
 *.sublime-*
 npm-*.log
+
+public/css/app.css
+public/js/app.js
+public/js/manifest.js
+
