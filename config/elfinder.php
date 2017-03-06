@@ -9,7 +9,7 @@ return array(
     |
     | The dir where to store the images (relative from public)
     |
-    */
+     */
     'dir' => ['files'],
 
     /*
@@ -24,7 +24,7 @@ return array(
     |        'URL' => url('to/disk'),
     |        'alias' => 'Local storage',
     |    ]
-    */
+     */
     'disks' => [
 
     ],
@@ -36,11 +36,11 @@ return array(
     |
     | The default group settings for the elFinder routes.
     |
-    */
+     */
 
     'route' => [
         'prefix' => 'elfinder',
-        'middleware' => 'replace-this-with-your-middleware', //Set to null to disable middleware filter
+        'middleware' => ['web', 'auth'], //Set to null to disable middleware filter
     ],
 
     /*
@@ -50,7 +50,7 @@ return array(
     |
     | Filter callback to check the files
     |
-    */
+     */
 
     'access' => 'Barryvdh\Elfinder\Elfinder::checkAccess',
 
@@ -62,7 +62,7 @@ return array(
     | By default, the roots file is LocalFileSystem, with the above public dir.
     | If you want custom options, you can set your own roots below.
     |
-    */
+     */
 
     'roots' => null,
 
@@ -74,10 +74,10 @@ return array(
     | These options are merged, together with 'roots' and passed to the Connector.
     | See https://github.com/Studio-42/elFinder/wiki/Connector-configuration-options-2.1
     |
-    */
+     */
 
     'options' => array(),
-    
+
     /*
     |--------------------------------------------------------------------------
     | Root Options
@@ -86,7 +86,7 @@ return array(
     | These options are merged, together with every root by default.
     | See https://github.com/Studio-42/elFinder/wiki/Connector-configuration-options-2.1#root-options
     |
-    */
+     */
     'root_options' => array(
 
     ),
